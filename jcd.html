@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JCDecaux × Adobe — The Future of Outdoor Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --jcd-black: #0A0A0A;
+  --jcd-dark: #111111;
+  --jcd-panel: #1A1A1A;
+  --jcd-gold: #F5C842;
+  --jcd-gold-light: #FAD95A;
+  --jcd-gold-dim: rgba(245,200,66,0.15);
+  --adobe-red: #FF0000;
+  --adobe-red-dim: rgba(255,0,0,0.12);
+  --off-white: #F9F8F5;
+  --grey-light: #E8E6E0;
+  --grey-mid: #9A9690;
+  --text-body: #CFCCC5;
+  --font-head: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--jcd-black);
+  color: var(--off-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SCROLL REVEALS ── */
+.rv { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.rv.vis { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
+.d5 { transition-delay: 0.5s; }
+
+/* ── HEADER ── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245,200,66,0.12);
+}
+.logo-jcd {
+  font-family: var(--font-head);
+  font-size: 18px; font-weight: 800; letter-spacing: -0.5px;
+  color: var(--off-white);
+}
+.logo-jcd span { color: var(--jcd-gold); }
+.logo-adobe {
+  font-family: var(--font-head);
+  font-size: 16px; font-weight: 700; color: var(--adobe-red);
+  letter-spacing: 1px;
+}
+.header-divider {
+  width: 1px; height: 24px;
+  background: rgba(255,255,255,0.2);
+  margin: 0 20px;
+}
+.header-logos { display: flex; align-items: center; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  padding: 120px 48px 80px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse at 50% 60%, rgba(245,200,66,0.06) 0%, transparent 70%),
+              radial-gradient(ellipse at 80% 20%, rgba(255,0,0,0.05) 0%, transparent 50%);
+}
+.hero-content { position: relative; z-index: 2; max-width: 860px; }
+.hero-eyebrow {
+  font-family: var(--font-head);
+  font-size: 11px; font-weight: 600; letter-spacing: 3px;
+  color: var(--jcd-gold); text-transform: uppercase; margin-bottom: 24px;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: inline-block; width: 32px; height: 1px; background: var(--jcd-gold);
+}
+h1 {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 800; line-height: 1.05; letter-spacing: -2px;
+  color: var(--off-white); margin-bottom: 28px;
+}
+h1 em { color: var(--jcd-gold); font-style: normal; }
+.hero-sub {
+  font-size: 18px; font-weight: 300; color: var(--text-body); max-width: 640px; margin: 0 auto 48px;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--jcd-gold); color: var(--jcd-black);
+  padding: 14px 32px; border-radius: 4px;
+  font-family: var(--font-head); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.5px; cursor: pointer; border: none;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.hero-cta:hover { background: var(--jcd-gold-light); transform: translateY(-2px); }
+
+/* ── CITYSCAPE SVG AREA ── */
+.cityscape-wrap {
+  width: 100%; max-width: 900px; margin: 60px auto 0;
+  position: relative; z-index: 2;
+}
+
+/* ── SECTION COMMONS ── */
+section { padding: 100px 48px; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  font-family: var(--font-head);
+  font-size: 10px; font-weight: 700; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--jcd-gold); margin-bottom: 16px;
+}
+h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
+  color: var(--off-white); margin-bottom: 20px;
+}
+h2 em { color: var(--jcd-gold); font-style: normal; }
+.section-intro {
+  font-size: 16px; color: var(--text-body); max-width: 600px; line-height: 1.8;
+}
+
+/* ── CHALLENGE SECTION ── */
+#challenge { background: var(--jcd-dark); }
+.challenge-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
+}
+.challenge-card {
+  background: var(--jcd-panel);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px; padding: 32px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.challenge-card:hover { border-color: rgba(245,200,66,0.3); transform: translateY(-4px); }
+.challenge-card-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: var(--jcd-gold-dim); display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 16px;
+}
+.challenge-card h3 {
+  font-family: var(--font-head); font-size: 15px; font-weight: 700;
+  color: var(--off-white); margin-bottom: 10px;
+}
+.challenge-card p { font-size: 13px; color: var(--text-body); line-height: 1.7; }
+.stat-row {
+  display: flex; gap: 48px; margin-top: 60px; padding-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.stat-item { flex: 1; }
+.stat-number {
+  font-family: var(--font-head); font-size: 48px; font-weight: 800;
+  color: var(--jcd-gold); line-height: 1; margin-bottom: 6px;
+}
+.stat-label { font-size: 13px; color: var(--text-body); }
+
+/* ── JOURNEY SECTION ── */
+#journey { background: var(--jcd-black); }
+.journey-tabs {
+  display: flex; gap: 4px; margin: 48px 0 0; flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0;
+}
+.j-tab {
+  font-family: var(--font-head); font-size: 12px; font-weight: 600; letter-spacing: 0.3px;
+  padding: 12px 20px; cursor: pointer; border: none; background: transparent;
+  color: var(--grey-mid); border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+  margin-bottom: -1px;
+}
+.j-tab:hover { color: var(--off-white); }
+.j-tab.active { color: var(--jcd-gold); border-bottom-color: var(--jcd-gold); }
+.journey-panels { margin-top: 40px; }
+.j-panel { display: none; }
+.j-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.j-today, .j-tomorrow {
+  background: var(--jcd-panel); border-radius: 8px; padding: 28px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.j-tomorrow { border-color: rgba(245,200,66,0.2); }
+.panel-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 3px; display: inline-block; margin-bottom: 16px;
+}
+.tag-today { background: rgba(255,255,255,0.08); color: var(--grey-mid); }
+.tag-tomorrow { background: var(--jcd-gold-dim); color: var(--jcd-gold); }
+.j-today h4, .j-tomorrow h4 {
+  font-family: var(--font-head); font-size: 16px; font-weight: 700; margin-bottom: 12px;
+}
+.j-today h4 { color: var(--off-white); }
+.j-tomorrow h4 { color: var(--jcd-gold); }
+.j-today p, .j-tomorrow p { font-size: 13px; color: var(--text-body); line-height: 1.8; }
+.use-case-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.use-case-pill {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
+  padding: 4px 10px; border-radius: 20px;
+  background: var(--adobe-red-dim); color: #FF6B6B; border: 1px solid rgba(255,0,0,0.2);
+}
+.pull-quote {
+  margin-top: 32px; padding: 20px 24px;
+  border-left: 3px solid var(--jcd-gold);
+  background: var(--jcd-gold-dim); border-radius: 0 6px 6px 0;
+  font-size: 14px; font-style: italic; color: var(--off-white); line-height: 1.7;
+}
+
+/* ── POSSIBILITY SECTION ── */
+#possibility { background: var(--jcd-dark); }
+.scenario-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 56px; }
+.scenario-card {
+  background: var(--jcd-panel); border-radius: 10px; padding: 36px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: default;
+}
+.scenario-card:hover { border-color: rgba(245,200,66,0.3); transform: translateY(-4px); }
+.scenario-num {
+  font-family: var(--font-head); font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; color: var(--jcd-gold); margin-bottom: 16px;
+}
+.scenario-card h3 {
+  font-family: var(--font-head); font-size: 20px; font-weight: 700;
+  color: var(--off-white); margin-bottom: 12px; line-height: 1.3;
+}
+.scenario-card p { font-size: 13px; color: var(--text-body); line-height: 1.8; margin-bottom: 20px; }
+.capability-tag {
+  display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 5px 12px; border-radius: 3px;
+  background: var(--adobe-red-dim); color: #FF6060; border: 1px solid rgba(255,0,0,0.15);
+}
+
+/* ── PROGRAMME TIMELINE ── */
+#programme { background: var(--jcd-black); overflow: hidden; }
+.timeline-wrap { margin-top: 60px; position: relative; }
+.timeline-track {
+  display: flex; gap: 0; position: relative;
+}
+.timeline-track::before {
+  content: ''; position: absolute; top: 36px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245,200,66,0.3) 10%, rgba(245,200,66,0.3) 90%, transparent);
+}
+.phase {
+  flex: 1; padding: 0 12px; text-align: center; position: relative;
+}
+.phase-dot {
+  width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-size: 11px; font-weight: 800;
+  letter-spacing: 1px; position: relative; z-index: 2;
+}
+.phase-dot.assess { background: var(--jcd-panel); border: 2px solid rgba(255,255,255,0.15); color: var(--grey-mid); }
+.phase-dot.aspire { background: var(--jcd-gold-dim); border: 2px solid rgba(245,200,66,0.5); color: var(--jcd-gold); }
+.phase-dot.achieve { background: rgba(255,0,0,0.1); border: 2px solid rgba(255,0,0,0.3); color: #FF6060; }
+.phase-name {
+  font-family: var(--font-head); font-size: 14px; font-weight: 700;
+  color: var(--off-white); margin-bottom: 8px;
+}
+.phase-period {
+  font-size: 11px; color: var(--grey-mid); margin-bottom: 16px; letter-spacing: 0.5px;
+}
+.phase-milestones { list-style: none; text-align: left; }
+.phase-milestones li {
+  font-size: 12px; color: var(--text-body); padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04); line-height: 1.5;
+}
+.phase-milestones li::before { content: '→ '; color: var(--jcd-gold); font-weight: 700; }
+.phase-value {
+  margin-top: 16px; padding: 12px;
+  background: var(--jcd-gold-dim); border-radius: 6px;
+  font-family: var(--font-head); font-size: 12px; font-weight: 600;
+  color: var(--jcd-gold); text-align: center;
+}
+
+/* ── ONE JCDECAUX SECTION ── */
+#global { background: var(--jcd-dark); }
+.global-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: center; margin-top: 56px;
+}
+.global-copy h3 {
+  font-family: var(--font-head); font-size: 22px; font-weight: 700;
+  color: var(--off-white); margin-bottom: 16px; line-height: 1.3;
+}
+.global-copy p { font-size: 14px; color: var(--text-body); line-height: 1.8; margin-bottom: 16px; }
+.global-markets { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.market-chip {
+  font-size: 11px; font-weight: 600; padding: 6px 14px; border-radius: 20px;
+  background: var(--jcd-panel); color: var(--grey-light);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.market-chip.uk {
+  background: var(--jcd-gold-dim); color: var(--jcd-gold);
+  border-color: rgba(245,200,66,0.3);
+}
+
+/* ── WHY ADOBE ── */
+#why-adobe { background: var(--jcd-black); }
+.adobe-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.pillar-card {
+  background: var(--jcd-panel); border-radius: 10px; padding: 32px;
+  border: 1px solid rgba(255,0,0,0.1);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.pillar-card:hover { border-color: rgba(255,0,0,0.3); transform: translateY(-4px); }
+.pillar-icon {
+  width: 44px; height: 44px; border-radius: 8px;
+  background: var(--adobe-red-dim); margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.pillar-card h3 {
+  font-family: var(--font-head); font-size: 16px; font-weight: 700;
+  color: var(--off-white); margin-bottom: 8px;
+}
+.pillar-product {
+  font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  color: #FF6060; margin-bottom: 14px; text-transform: uppercase;
+}
+.pillar-card p { font-size: 13px; color: var(--text-body); line-height: 1.7; }
+
+/* ── FOOTER ── */
+footer {
+  background: #050505; padding: 64px 48px;
+  border-top: 1px solid rgba(245,200,66,0.1);
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-cta-block h3 {
+  font-family: var(--font-head); font-size: 28px; font-weight: 800;
+  color: var(--off-white); margin-bottom: 8px; letter-spacing: -0.5px;
+}
+.footer-cta-block p { font-size: 14px; color: var(--text-body); margin-bottom: 24px; }
+.footer-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--jcd-gold); color: var(--jcd-black);
+  padding: 14px 28px; border-radius: 4px;
+  font-family: var(--font-head); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.3px; text-decoration: none; transition: background 0.2s;
+}
+.footer-btn:hover { background: var(--jcd-gold-light); }
+.footer-logos { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.footer-logo-jcd {
+  font-family: var(--font-head); font-size: 20px; font-weight: 800;
+  color: var(--off-white);
+}
+.footer-logo-jcd span { color: var(--jcd-gold); }
+.footer-logo-adobe {
+  font-family: var(--font-head); font-size: 14px; font-weight: 700;
+  color: var(--adobe-red); letter-spacing: 1.5px;
+}
+.footer-note {
+  max-width: 1100px; margin: 40px auto 0;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px; color: rgba(255,255,255,0.2); text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  header { padding: 16px 24px; }
+  section { padding: 72px 24px; }
+  h1 { font-size: 36px; letter-spacing: -1px; }
+  h2 { font-size: 28px; }
+  .challenge-grid, .scenario-grid, .adobe-pillars { grid-template-columns: 1fr; }
+  .j-panel.active { grid-template-columns: 1fr; }
+  .global-layout { grid-template-columns: 1fr; gap: 40px; }
+  .timeline-track { flex-direction: column; gap: 32px; }
+  .timeline-track::before { display: none; }
+  .stat-row { flex-direction: column; gap: 32px; }
+  .footer-inner { flex-direction: column; gap: 40px; text-align: center; }
+  .footer-logos { align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-logos">
+    <span class="logo-jcd">JC<span>Decaux</span></span>
+    <div class="header-divider"></div>
+    <span class="logo-adobe">ADOBE</span>
+  </div>
+  <span style="font-family:var(--font-head);font-size:11px;font-weight:600;letter-spacing:2px;color:var(--grey-mid);text-transform:uppercase;">Strategic Vision — 2025</span>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content rv">
+    <div class="hero-eyebrow">Adobe × JCDecaux</div>
+    <h1>The Future of<br><em>Outdoor Intelligence</em></h1>
+    <p class="hero-sub">From fragmented workflows to a unified campaign intelligence platform — building the operating system for the world's leading out-of-home media company.</p>
+    <a href="#challenge" class="hero-cta">Explore the Vision ↓</a>
+  </div>
+
+  <!-- ANIMATED CITYSCAPE -->
+  <div class="cityscape-wrap rv d2">
+    <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <defs>
+        <radialGradient id="glowG" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#F5C842" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#F5C842" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+      </defs>
+      <!-- Ground line -->
+      <line x1="0" y1="190" x2="900" y2="190" stroke="rgba(245,200,66,0.15)" stroke-width="1"/>
+      <!-- Buildings -->
+      <rect x="40" y="120" width="60" height="70" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="120" y="80" width="50" height="110" fill="#1E1E1E" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="190" y="100" width="70" height="90" fill="#181818" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="280" y="60" width="55" height="130" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="355" y="90" width="65" height="100" fill="#1E1E1E" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="440" y="50" width="80" height="140" fill="#181818" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="540" y="75" width="55" height="115" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="615" y="95" width="70" height="95" fill="#1E1E1E" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="705" y="65" width="60" height="125" fill="#181818" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <rect x="785" y="110" width="75" height="80" fill="#1A1A1A" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- OOH Panels - static (dim) -->
+      <rect x="55" y="105" width="28" height="18" rx="2" fill="#222" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <rect x="295" y="42" width="28" height="18" rx="2" fill="#222" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <rect x="460" y="32" width="28" height="18" rx="2" fill="#222" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <rect x="720" y="48" width="28" height="18" rx="2" fill="#222" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+      <!-- OOH Panels - ACTIVE (gold, animated glow) -->
+      <rect x="138" y="62" width="28" height="18" rx="2" fill="#F5C842" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="370" y="72" width="28" height="18" rx="2" fill="#F5C842" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4s" begin="1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="557" y="58" width="28" height="18" rx="2" fill="#F5C842" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="800" y="92" width="28" height="18" rx="2" fill="#F5C842" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Connection lines between active panels -->
+      <line x1="152" y1="80" x2="384" y2="80" stroke="rgba(245,200,66,0.2)" stroke-width="1" stroke-dasharray="4,4">
+        <animate attributeName="stroke-opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="384" y1="80" x2="571" y2="66" stroke="rgba(245,200,66,0.2)" stroke-width="1" stroke-dasharray="4,4">
+        <animate attributeName="stroke-opacity" values="0.2;0.6;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="571" y1="66" x2="814" y2="100" stroke="rgba(245,200,66,0.2)" stroke-width="1" stroke-dasharray="4,4">
+        <animate attributeName="stroke-opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </line>
+
+      <!-- Central data pulse -->
+      <circle cx="450" cy="130" r="6" fill="var(--jcd-gold)" opacity="0.8">
+        <animate attributeName="r" values="6;18;6" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="450" cy="130" r="4" fill="var(--jcd-gold)"/>
+
+      <!-- Labels -->
+      <text x="450" y="210" text-anchor="middle" fill="rgba(245,200,66,0.5)" font-family="Sora,sans-serif" font-size="9" font-weight="600" letter-spacing="3">CONNECTED · INTELLIGENT · REAL-TIME</text>
+    </svg>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section id="challenge">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">The Challenge</p></div>
+    <h2 class="rv d1">Six stages.<br><em>Too much friction.</em></h2>
+    <p class="section-intro rv d2">JCDecaux's campaign lifecycle is one of the most complex in media — spanning planning, booking, deployment, and reconciliation across hundreds of clients, formats, and markets. Today, each stage carries unnecessary cost.</p>
+
+    <div class="challenge-grid">
+      <div class="challenge-card rv d1">
+        <div class="challenge-card-icon">📋</div>
+        <h3>Pipeline fragmentation</h3>
+        <p>Proposal creation is manual and disconnected from inventory and pricing intelligence. Sales teams spend capacity on admin rather than client strategy.</p>
+      </div>
+      <div class="challenge-card rv d2">
+        <div class="challenge-card-icon">🔄</div>
+        <h3>Negotiation rework loops</h3>
+        <p>Contract and booking workflows involve multiple handoffs with limited version control — creating rework cycles that delay campaign activation and erode margin.</p>
+      </div>
+      <div class="challenge-card rv d3">
+        <div class="challenge-card-icon">📡</div>
+        <h3>Deployment disconnects</h3>
+        <p>Creative asset management is separated from media scheduling. Last-minute changes cascade into operational firefighting and compliance risk.</p>
+      </div>
+      <div class="challenge-card rv d1">
+        <div class="challenge-card-icon">📊</div>
+        <h3>Reconciliation at scale</h3>
+        <p>Post-campaign reconciliation is time-intensive and prone to error, impacting billing accuracy, client trust, and team bandwidth at month end.</p>
+      </div>
+      <div class="challenge-card rv d2">
+        <div class="challenge-card-icon">👤</div>
+        <h3>Client experience gaps</h3>
+        <p>Agency and advertiser clients lack self-service visibility into campaign status, performance, and proof-of-play — generating inbound support demand.</p>
+      </div>
+      <div class="challenge-card rv d3">
+        <div class="challenge-card-icon">🌐</div>
+        <h3>No cross-market intelligence</h3>
+        <p>UK insights don't flow to other markets. Every region solves the same problems independently, multiplying cost and preventing global programme scale.</p>
+      </div>
+    </div>
+
+    <div class="stat-row rv d2">
+      <div class="stat-item">
+        <div class="stat-number" data-target="16">0</div>
+        <div class="stat-label">Validated use cases across six journey stages</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="6">0</div>
+        <div class="stat-label">Journey stages mapped in the co-creation workshop</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="80">0</div>
+        <div class="stat-label">Markets where JCDecaux operates globally</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">The Advertiser Journey</p></div>
+    <h2 class="rv d1">Today's friction.<br><em>Tomorrow's flow.</em></h2>
+    <p class="section-intro rv d2">Each stage of the JCDecaux campaign lifecycle holds significant untapped potential. Explore what the Adobe-powered future looks like, stage by stage.</p>
+
+    <div class="journey-tabs rv d3">
+      <button class="j-tab active" onclick="showTab(&#39;pipeline&#39;)">Pipeline & Planning</button>
+      <button class="j-tab" onclick="showTab(&#39;booking&#39;)">Negotiation & Booking</button>
+      <button class="j-tab" onclick="showTab(&#39;campaign&#39;)">Campaign Management</button>
+      <button class="j-tab" onclick="showTab(&#39;deployment&#39;)">Deployment</button>
+      <button class="j-tab" onclick="showTab(&#39;reconciliation&#39;)">Reconciliation</button>
+    </div>
+
+    <div class="journey-panels rv d4">
+
+      <div class="j-panel active" id="panel-pipeline">
+        <div class="j-today">
+          <span class="panel-tag tag-today">Today</span>
+          <h4>Manual proposals, disconnected data</h4>
+          <p>Sales teams build proposals from scratch using disconnected pricing, inventory, and client history. Campaign briefs arrive across email and spreadsheets with no centralised intake. Forecasting relies on individual knowledge rather than system intelligence.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Manual brief intake</span>
+            <span class="use-case-pill">No yield intelligence</span>
+            <span class="use-case-pill">Siloed CRM data</span>
+          </div>
+        </div>
+        <div class="j-tomorrow">
+          <span class="panel-tag tag-tomorrow">Adobe-Powered</span>
+          <h4>AI-assisted pipeline intelligence</h4>
+          <p>Centralised brief intake with AI-driven proposal generation informed by real-time inventory and historical win rates. Predictive pipeline scoring surfaces the highest-value opportunities. Sales capacity is redirected from admin to strategy.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Workfront brief automation</span>
+            <span class="use-case-pill">AI yield optimisation</span>
+            <span class="use-case-pill">Unified client 360</span>
+          </div>
+        </div>
+        <div class="pull-quote" style="grid-column:1/-1">
+          "If we can get briefs into a single intake system and automate the first pass of proposal building, we get hours back per deal — every deal." — Workshop insight
+        </div>
+      </div>
+
+      <div class="j-panel" id="panel-booking">
+        <div class="j-today">
+          <span class="panel-tag tag-today">Today</span>
+          <h4>Multiple handoffs, version control gaps</h4>
+          <p>Contract negotiation involves email chains, manual updates, and disconnected approval workflows. Version conflicts slow activation timelines. Finance and sales operate from different documents, generating reconciliation issues downstream.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Email-based approvals</span>
+            <span class="use-case-pill">Version conflicts</span>
+            <span class="use-case-pill">Slow activation</span>
+          </div>
+        </div>
+        <div class="j-tomorrow">
+          <span class="panel-tag tag-tomorrow">Adobe-Powered</span>
+          <h4>Digital contract lifecycle management</h4>
+          <p>Acrobat Sign and Workfront bring contract creation, negotiation, and approval into a single traceable workflow. Automated routing eliminates manual chasing. Activation timelines compress, and audit trails are created by default.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Acrobat Sign e-signature</span>
+            <span class="use-case-pill">Workfront approvals</span>
+            <span class="use-case-pill">Automated routing</span>
+          </div>
+        </div>
+        <div class="pull-quote" style="grid-column:1/-1">
+          "The amount of time lost chasing signatures and approvals is significant — and entirely avoidable." — Workshop insight
+        </div>
+      </div>
+
+      <div class="j-panel" id="panel-campaign">
+        <div class="j-today">
+          <span class="panel-tag tag-today">Today</span>
+          <h4>Reactive management, limited client visibility</h4>
+          <p>Campaign managers track status across multiple systems without a unified view. Client communications are reactive rather than proactive. Creative change requests require manual re-briefing and cause downstream delays across deployment teams.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Fragmented status tracking</span>
+            <span class="use-case-pill">Reactive comms</span>
+            <span class="use-case-pill">Manual change requests</span>
+          </div>
+        </div>
+        <div class="j-tomorrow">
+          <span class="panel-tag tag-tomorrow">Adobe-Powered</span>
+          <h4>Proactive campaign intelligence</h4>
+          <p>A unified campaign management layer provides real-time visibility for internal teams and self-service portals for agency clients. Automated alerts flag at-risk campaigns. Creative changes are managed through a structured workflow with downstream impact assessment.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Real-Time CDP</span>
+            <span class="use-case-pill">Client self-service portal</span>
+            <span class="use-case-pill">Automated alerting</span>
+          </div>
+        </div>
+        <div class="pull-quote" style="grid-column:1/-1">
+          "Clients want to see what's live, what's pending, what's changed — without calling us. That's table stakes now." — Workshop insight
+        </div>
+      </div>
+
+      <div class="j-panel" id="panel-deployment">
+        <div class="j-today">
+          <span class="panel-tag tag-today">Today</span>
+          <h4>Asset chaos at scale</h4>
+          <p>Creative assets are distributed across email, shared drives, and media servers without a centralised DAM. Last-minute changes create compliance risk and manual re-distribution effort. Proof-of-deployment is inconsistent and labour-intensive to produce.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Distributed asset stores</span>
+            <span class="use-case-pill">Compliance risk</span>
+            <span class="use-case-pill">Manual proof-of-play</span>
+          </div>
+        </div>
+        <div class="j-tomorrow">
+          <span class="panel-tag tag-tomorrow">Adobe-Powered</span>
+          <h4>Intelligent asset orchestration</h4>
+          <p>Adobe Experience Manager Assets becomes the single source of truth for creative. Automated format conversion and distribution to screen networks eliminates manual effort. Proof-of-deployment data flows automatically into campaign records and client reporting.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">AEM Assets DAM</span>
+            <span class="use-case-pill">Auto-format conversion</span>
+            <span class="use-case-pill">Automated proof-of-play</span>
+          </div>
+        </div>
+        <div class="pull-quote" style="grid-column:1/-1">
+          "A single source of truth for creative assets would eliminate so many last-minute scrambles. It's a process and technology problem we can solve." — Workshop insight
+        </div>
+      </div>
+
+      <div class="j-panel" id="panel-reconciliation">
+        <div class="j-today">
+          <span class="panel-tag tag-today">Today</span>
+          <h4>Month-end manual reconciliation burden</h4>
+          <p>Post-campaign reconciliation is a significant manual exercise — matching actuals against bookings, resolving discrepancies, and producing billing documentation. Errors impact revenue recognition, delay invoicing, and require resource-intensive correction loops.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Manual matching</span>
+            <span class="use-case-pill">Billing delays</span>
+            <span class="use-case-pill">Revenue risk</span>
+          </div>
+        </div>
+        <div class="j-tomorrow">
+          <span class="panel-tag tag-tomorrow">Adobe-Powered</span>
+          <h4>Automated reconciliation at scale</h4>
+          <p>Workfront and integrated data flows automate the matching of actuals to bookings with exception-based alerting for discrepancies. Billing documentation is generated automatically. Finance teams shift from data entry to exception management — recovering days per month.</p>
+          <div class="use-case-pills">
+            <span class="use-case-pill">Workfront automation</span>
+            <span class="use-case-pill">Exception-based alerting</span>
+            <span class="use-case-pill">Auto-billing generation</span>
+          </div>
+        </div>
+        <div class="pull-quote" style="grid-column:1/-1">
+          "Reconciliation consumes an enormous amount of the finance team's time at month end. Automating the matching logic alone would be transformative." — Workshop insight
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ART OF THE POSSIBLE -->
+<section id="possibility">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">The Art of the Possible</p></div>
+    <h2 class="rv d1">Imagine what becomes<br><em>possible at JCDecaux.</em></h2>
+    <p class="section-intro rv d2">Four high-priority use cases that, when combined, fundamentally shift JCDecaux's competitive position and operational model.</p>
+
+    <div class="scenario-grid">
+      <div class="scenario-card rv d1">
+        <div class="scenario-num">USE CASE 01 — HIGH PRIORITY</div>
+        <h3>AI-Powered Yield Optimisation</h3>
+        <p>Imagine a sales intelligence layer that recommends optimal pricing and inventory allocation in real-time, informed by historical win rates, market demand signals, and client segment data. Sales teams close higher-value deals faster — with the machine doing the heavy analytical lifting.</p>
+        <span class="capability-tag">Real-Time CDP + AI Assistant</span>
+      </div>
+      <div class="scenario-card rv d2">
+        <div class="scenario-num">USE CASE 02 — HIGH PRIORITY</div>
+        <h3>Self-Serve Campaign Portal</h3>
+        <p>Imagine agency clients logging into a branded portal to check live campaign status, view proof-of-play, approve creative, and download performance reports — without a single inbound call to JCDecaux. Client satisfaction rises. Account team capacity is freed for growth conversations.</p>
+        <span class="capability-tag">AEM Sites + Journey Optimiser</span>
+      </div>
+      <div class="scenario-card rv d3">
+        <div class="scenario-num">USE CASE 03 — HIGH PRIORITY</div>
+        <h3>Automated Reconciliation Engine</h3>
+        <p>Imagine a system that automatically matches campaign actuals against bookings, flags exceptions for human review, and generates billing documentation — turning a week-long month-end process into a daily background task. Finance recovers capacity. Revenue recognition accelerates.</p>
+        <span class="capability-tag">Workfront + Data Integration</span>
+      </div>
+      <div class="scenario-card rv d4">
+        <div class="scenario-num">USE CASE 04 — STRATEGIC ENABLER</div>
+        <h3>Global Content Intelligence</h3>
+        <p>Imagine a centralised creative intelligence layer that manages assets across all 80 markets — with automated localisation, compliance checking, and format conversion built in. What JCDecaux UK proves here becomes the blueprint every market follows. One investment. Global return.</p>
+        <span class="capability-tag">AEM Assets + Firefly AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME TIMELINE -->
+<section id="programme">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">The Programme</p></div>
+    <h2 class="rv d1">A phased path to<br><em>measurable value.</em></h2>
+    <p class="section-intro rv d2">Built on Adobe's Amplify framework — Assess, Aspire, Achieve — the programme delivers value at each phase rather than asking JCDecaux to wait for a big bang transformation.</p>
+
+    <div class="timeline-wrap rv d3">
+      <div class="timeline-track">
+        <div class="phase">
+          <div class="phase-dot assess">ASSESS</div>
+          <div class="phase-name">Foundation</div>
+          <div class="phase-period">Q1–Q2 2025</div>
+          <ul class="phase-milestones">
+            <li>Co-creation workshop complete</li>
+            <li>16 use cases validated and prioritised</li>
+            <li>Architecture session: current-state mapping</li>
+            <li>Executive alignment and programme sign-off</li>
+          </ul>
+          <div class="phase-value">Clarity & commitment</div>
+        </div>
+        <div class="phase">
+          <div class="phase-dot aspire">ASPIRE</div>
+          <div class="phase-name">Proof Points</div>
+          <div class="phase-period">Q3–Q4 2025</div>
+          <ul class="phase-milestones">
+            <li>Phase 1 use cases in delivery</li>
+            <li>Workfront workflow automation live</li>
+            <li>AEM Assets pilot (creative DAM)</li>
+            <li>Aspire playback to JCDecaux leadership</li>
+          </ul>
+          <div class="phase-value">Measurable ROI unlocked</div>
+        </div>
+        <div class="phase">
+          <div class="phase-dot achieve">ACHIEVE</div>
+          <div class="phase-name">Scale & Expand</div>
+          <div class="phase-period">2026 onward</div>
+          <ul class="phase-milestones">
+            <li>Full platform activated across journeys</li>
+            <li>Client self-service portal live</li>
+            <li>UK model presented to JCDecaux SE</li>
+            <li>Global programme design begins</li>
+          </ul>
+          <div class="phase-value">Global partnership unlocked</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE JCDECAUX -->
+<section id="global">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">The Bigger Picture</p></div>
+    <h2 class="rv d1">One JCDecaux.<br><em>Everywhere.</em></h2>
+
+    <div class="global-layout">
+      <div class="global-copy rv d2">
+        <h3>The UK is the proof point.<br>The prize is global.</h3>
+        <p>JCDecaux operates across 80 markets in 29 countries. The operational challenges validated in the UK co-creation workshop are not unique to the UK — they are structural realities of the OOH media model, replicated in every market.</p>
+        <p>What JCDecaux UK proves — that a unified Adobe platform can streamline the full campaign lifecycle, reduce rework, and elevate client experience — becomes the business case for a group-level transformation across JCDecaux SE.</p>
+        <p>One platform. One data model. One way of working — at global scale.</p>
+        <div class="global-markets rv d3">
+          <span class="market-chip uk">🇬🇧 United Kingdom</span>
+          <span class="market-chip">🇫🇷 France</span>
+          <span class="market-chip">🇩🇪 Germany</span>
+          <span class="market-chip">🇦🇺 Australia</span>
+          <span class="market-chip">🇸🇬 Singapore</span>
+          <span class="market-chip">🇺🇸 United States</span>
+          <span class="market-chip">🇧🇷 Brazil</span>
+          <span class="market-chip">+ 73 more</span>
+        </div>
+      </div>
+
+      <!-- Hub and Spoke SVG -->
+      <div class="rv d3">
+        <svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;margin:0 auto;display:block;">
+          <defs>
+            <radialGradient id="hubGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F5C842" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#F5C842" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <!-- Glow bg -->
+          <circle cx="190" cy="170" r="100" fill="url(#hubGrad)">
+            <animate attributeName="r" values="90;110;90" dur="4s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Spoke lines -->
+          <line x1="190" y1="170" x2="70" y2="60" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="190" y1="170" x2="310" y2="60" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="190" y1="170" x2="340" y2="170" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="190" y1="170" x2="310" y2="290" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="190" y1="170" x2="70" y2="290" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <line x1="190" y1="170" x2="40" y2="170" stroke="rgba(245,200,66,0.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+          <!-- Hub -->
+          <circle cx="190" cy="170" r="46" fill="#1A1A1A" stroke="#F5C842" stroke-width="2" filter="url(#glow)"/>
+          <text x="190" y="164" text-anchor="middle" fill="#F5C842" font-family="Sora,sans-serif" font-size="10" font-weight="800" letter-spacing="1">JCDECAUX</text>
+          <text x="190" y="178" text-anchor="middle" fill="rgba(245,200,66,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600" letter-spacing="1">UK CENTRE</text>
+
+          <!-- Market nodes -->
+          <circle cx="70" cy="60" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="70" y="57" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">France</text>
+          <text x="70" y="69" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">Market 2</text>
+
+          <circle cx="310" cy="60" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="310" y="57" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">Germany</text>
+          <text x="310" y="69" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">Market 3</text>
+
+          <circle cx="340" cy="170" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="340" y="167" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">APAC</text>
+          <text x="340" y="179" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">Markets</text>
+
+          <circle cx="310" cy="290" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="310" y="287" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">Americas</text>
+          <text x="310" y="299" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">Markets</text>
+
+          <circle cx="70" cy="290" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="70" y="287" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">Middle</text>
+          <text x="70" y="299" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">East / Africa</text>
+
+          <circle cx="40" cy="170" r="28" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="40" y="167" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Sora,sans-serif" font-size="8" font-weight="600">Iberia</text>
+          <text x="40" y="179" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Sora,sans-serif" font-size="7">Markets</text>
+
+          <!-- Pulse animation on hub -->
+          <circle cx="190" cy="170" r="50" fill="none" stroke="rgba(245,200,66,0.3)" stroke-width="1">
+            <animate attributeName="r" values="50;80;50" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ADOBE -->
+<section id="why-adobe">
+  <div class="section-inner">
+    <div class="rv"><p class="section-label">Why Adobe</p></div>
+    <h2 class="rv d1">The platform built for<br><em>what JCDecaux needs.</em></h2>
+    <p class="section-intro rv d2">Three capabilities. One connected platform. Purpose-built for the complexity of modern out-of-home media operations.</p>
+
+    <div class="adobe-pillars">
+      <div class="pillar-card rv d1">
+        <div class="pillar-icon">⚡</div>
+        <div class="pillar-product">Adobe Workfront</div>
+        <h3>Operational Velocity</h3>
+        <p>The enterprise work management platform that connects briefs, approvals, creative production, and campaign delivery into a single traceable workflow — eliminating the email chains and manual handoffs that slow JCDecaux down today.</p>
+      </div>
+      <div class="pillar-card rv d2">
+        <div class="pillar-icon">🎯</div>
+        <div class="pillar-product">Adobe Experience Manager</div>
+        <h3>Content at Scale</h3>
+        <p>A unified DAM and content management layer that makes the right creative asset instantly accessible to every team, every market, every screen — with automated format conversion, compliance checking, and proof-of-play integration built in.</p>
+      </div>
+      <div class="pillar-card rv d3">
+        <div class="pillar-icon">📈</div>
+        <div class="pillar-product">Adobe Real-Time CDP</div>
+        <h3>Intelligence-Driven Selling</h3>
+        <p>A unified data foundation that surfaces client behaviour, campaign performance, and market intelligence in real time — enabling JCDecaux's sales teams to move from reactive account management to proactive, insight-led client growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-cta-block rv">
+      <h3>Ready to build<br>the blueprint together?</h3>
+      <p>The next step is the Aspire playback — where we map the phased programme, attribute ROI to each milestone, and build the board-ready business case.</p>
+      <a href="#hero" class="footer-btn">↑ Back to top</a>
+    </div>
+    <div class="footer-logos rv d2">
+      <div class="footer-logo-jcd">JC<span>Decaux</span></div>
+      <div style="width:40px;height:1px;background:rgba(255,255,255,0.1);"></div>
+      <div class="footer-logo-adobe">ADOBE</div>
+    </div>
+  </div>
+  <p class="footer-note">Strategic vision document prepared by Adobe Enterprise — confidential and for JCDecaux internal use only.</p>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+// Tab switcher
+function showTab(id) {
+  document.querySelectorAll('.j-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.j-tab').forEach(t => t.classList.remove('active'));
+  const panel = document.getElementById('panel-' + id);
+  if (panel) panel.classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Stat counters
+function animateCounter(el, target, duration) {
+  let start = 0;
+  const step = Math.ceil(target / (duration / 50));
+  const timer = setInterval(() => {
+    start += step;
+    if (start >= target) { el.textContent = target + (target >= 80 ? '+' : ''); clearInterval(timer); }
+    else { el.textContent = start; }
+  }, 50);
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const target = parseInt(e.target.getAttribute('data-target'));
+      animateCounter(e.target, target, 1200);
+      statObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number[data-target]').forEach(el => statObserver.observe(el));
+</script>
+</body>
+</html>
