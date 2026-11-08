@@ -1,0 +1,41 @@
+{
+  "variantName": "breadcrumbs",
+  "baseBlock": "breadcrumbs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Breadcrumb trail under the hero showing the path to the current page",
+    "notes": [
+      "56px full-width strip (19px vertical padding, content-padding gutters) directly under the hero.",
+      "Small uppercase gold labels (12px / 18px, 0.24px tracking) with 7px chevron separators (10px each side).",
+      "Current page is plain text and dimmed (#565759 on light, #d2d2d3 on dark).",
+      "On dark sections (section style 'dark') the strip is #1d1f22 and the chevrons are white at 25% opacity."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row, one cell holding an unordered list; each <li> holds a link except the last, which is plain text for the current page",
+    "patterns": [
+      "link trail",
+      "current page as plain text",
+      "chevron separators"
+    ],
+    "blockContent": [
+      "HOME > About US > Our leadership"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    "style: dark (optional, white-text strip on dark background)"
+  ],
+  "sourceUrl": "https://www.neom.com/en-us/about/leadership",
+  "usage": {
+    "description": "Breadcrumb trail placed in its own section right under the page hero.",
+    "pagesUsing": [
+      "/en-us/about/leadership",
+      "/en-us/about/social-responsibility"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-07"
+  },
+  "reuseGuidance": "Put the block alone in its own section directly under the hero; the block removes the section's global padding so the strip is 56px high. Add section style 'dark' when the page band is dark."
+}

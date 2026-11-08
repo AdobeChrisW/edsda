@@ -1,0 +1,36 @@
+{
+  "variantName": "cards-downloads",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Grid of file downloads: thumbnail beside a title and a file-type/size download link",
+    "notes": [
+      "Cream background; 2-up grid of download items: report cover thumbnail with drop shadow left, uppercase title and gold \"PDF file 19.2MB\" download link right."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per file: cell 1 = thumbnail, cell 2 = h3 title + link to the file (link text = file type and size)",
+    "patterns": [
+      "thumbnail left, text right",
+      "title + file-type/size download link",
+      "2-up wrapping grid"
+    ],
+    "blockContent": [
+      "3 report downloads (2023, 2022, 2021 SR reports), each thumbnail + h3 title + PDF link with file size"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about/social-responsibility",
+  "usage": {
+    "description": "Report and document downloads.",
+    "pagesUsing": [
+      "/en-us/about/social-responsibility",
+      "/en-us/newsroom"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for downloadable files. Use cards-news for articles."
+}

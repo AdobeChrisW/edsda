@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,64 +12,11 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
-}
-
-/* fallback fonts */
+/* fallback font, metrics-adjusted Arial while Brown loads */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: brown-fallback;
+  size-adjust: 104%;
   src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
 }
 
 body {
@@ -77,15 +26,34 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  -webkit-font-smoothing: antialiased;
 }
 
 body.appear {
   display: block;
 }
 
+/* Arabic text uses Zarid first (source stack puts it right after Brown) */
+:lang(ar),
+[lang="ar"] {
+  font-family: zarid, var(--body-font-family);
+}
+
 header {
   height: var(--nav-height);
+}
+
+/* pages with a section sub-menu bar ("subnav" metadata) reserve its 61px before the header loads */
+html:has(meta[name='subnav' i]) header {
+  height: calc(var(--nav-height) + 61px);
+}
+
+/* the fixed header overlays full-bleed heroes, so it takes no space above them */
+body:has(main > .section:first-child :is(.carousel-hero-video, .hero-banner)) header,
+body:has(main > .section.cover:first-child) header {
+  height: 0;
 }
 
 header .header,
@@ -98,23 +66,36 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* default content typography (source: uppercase, regular weight, wide tracking) */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 16px;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+  font-weight: var(--heading-font-weight);
+  line-height: 1.43;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+  scroll-margin: calc(var(--nav-height) + 16px);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  line-height: 1.19;
+}
+
 h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
+
+h3 {
+  font-size: var(--heading-font-size-m);
+  line-height: 1.2;
+  text-transform: none;
+}
+
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
@@ -125,8 +106,13 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+strong,
+b {
+  font-weight: 400;
 }
 
 code,
@@ -142,10 +128,6 @@ pre {
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
-}
-
 input,
 textarea,
 select,
@@ -156,58 +138,93 @@ button {
 /* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
   overflow-wrap: break-word;
+  transition: color var(--button-transition);
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
 }
 
-/* buttons */
-a.button:any-link,
-button {
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* EDS button reset; NEOM CTAs sit on their own line, so the container is a block */
+main .button-container {
+  display: block;
+  margin: 0 0 24px;
+}
+
+main a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  white-space: normal;
+}
+
+/* NEOM pill button: standalone CTA links (source .m-button -primary -black) */
+main a.button:any-link,
+main button.button {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--button-height);
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  padding: 0 28px;
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+  background-color: var(--neom-black);
+  color: var(--neom-white);
   font-family: var(--body-font-family);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.25;
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: var(--label-letter-spacing);
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--button-transition), color var(--button-transition), border-color var(--button-transition);
 }
 
-a.button:hover,
-a.button:focus,
-button:hover,
-button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+main a.button:hover,
+main a.button:focus-visible,
+main button.button:hover {
+  background-color: var(--neom-charcoal);
+  color: var(--neom-white);
+}
+
+/* secondary: outlined pill (source .m-button -t-light) */
+main a.button.secondary:any-link {
+  border-color: var(--neom-grey-line);
+  background-color: transparent;
+  color: var(--neom-black);
+}
+
+main a.button.secondary:hover {
+  border-color: var(--neom-black);
+  background-color: transparent;
+  color: var(--neom-black);
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  opacity: 0.2;
   cursor: unset;
-}
-
-a.button.secondary,
-button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
 }
 
 main img {
@@ -229,29 +246,545 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: var(--section-padding) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--content-padding);
+  box-sizing: border-box;
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
+main > .section > .default-content-wrapper > :last-child {
+  margin-bottom: 0;
+}
+
+/* section metadata: colors */
+main .section.light,
+main .section.highlight,
+main .section.light-cream {
+  background-color: var(--neom-cream-light);
+}
+
+main .section.light-beige {
+  background-color: var(--neom-beige);
+}
+
+main .section.white {
+  background-color: var(--neom-white);
+}
+
+main .section.dark {
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6,
+main .section.dark a:any-link {
+  color: var(--neom-white);
+}
+
+main .section.dark a:hover {
+  color: var(--accent-on-dark-color);
+}
+
+/* on dark sections the pill turns white (source .m-button -primary -white) */
+main .section.dark a.button:any-link {
+  border-color: var(--neom-black-10);
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+}
+
+main .section.dark a.button:hover,
+main .section.dark a.button:focus-visible {
+  background-color: var(--neom-cream);
+  color: var(--neom-black);
+}
+
+/* section metadata: layout */
+main .section.centered .default-content-wrapper {
+  max-width: 1040px;
+  text-align: center;
+}
+
+/* cascade order below is intentional: section, page-type and eyebrow overrides come last */
+/* stylelint-disable no-descending-specificity */
+
+/* text-only centered intro (source c24 paragraph): larger copy in a narrow column */
+main .section.centered:not([class*="-container"]) .default-content-wrapper {
+  max-width: calc(640px + 2 * var(--content-padding));
+}
+
+main .section.centered:not([class*="-container"]) .default-content-wrapper p {
+  font-size: 21px;
+  line-height: 1.48;
+}
+
+/* section header with its CTA on the heading row (source featured news / resources headers) */
+main .section.cards-news-container,
+main .section.light-cream {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+main .section.dark.cards-news-container {
+  background-color: var(--neom-charcoal);
+}
+
+main .section.cards-news-container .default-content-wrapper,
+main .section.light-cream .default-content-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 32px;
+  align-items: center;
+}
+
+main .section.cards-news-container .default-content-wrapper > *,
+main .section.light-cream .default-content-wrapper > * {
+  grid-column: 1;
+}
+
+main .section.cards-news-container .default-content-wrapper > h2,
+main .section.light-cream .default-content-wrapper > h2 {
+  margin-bottom: 32px;
+}
+
+main .section.light-cream .default-content-wrapper > h2 {
+  color: var(--accent-color);
+}
+
+main .section.cards-news-container .default-content-wrapper > .button-container,
+main .section.light-cream .default-content-wrapper > .button-container {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  margin: 0 0 32px;
+}
+
+/* outlined pill with arrow (source .m-button -primary -t-light) */
+main .section.cards-news-container .default-content-wrapper a.button:any-link,
+main .section.light-cream .default-content-wrapper a.button:any-link {
+  min-height: 44px;
+  padding: 0 24px 0 32px;
+  border-color: var(--neom-grey-line);
+  background-color: transparent;
+  color: var(--neom-black);
+}
+
+main .section.cards-news-container .default-content-wrapper a.button::after,
+main .section.light-cream .default-content-wrapper a.button::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M9.3 3.3 8.6 4l3.5 3.5H2v1h10.1L8.6 12l.7.7L14 8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+main .section.cards-news-container .default-content-wrapper a.button:hover,
+main .section.light-cream .default-content-wrapper a.button:hover {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--neom-white);
+}
+
+main .section.cards-news-container .default-content-wrapper > p:not(.button-container) {
+  margin-bottom: 0;
+}
+
+main .section.dark.cards-news-container .default-content-wrapper a.button:any-link {
+  border-color: rgb(255 255 255 / 20%);
+  background-color: transparent;
+  color: var(--neom-white);
+}
+
+main .section.dark.cards-news-container .default-content-wrapper a.button:hover {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--neom-white);
+}
+
+/* component headings in centered block sections are the large tier (squad groups, gallery) */
+main .section.centered[class*='-container'] .default-content-wrapper h2 {
+  font-size: clamp(var(--heading-font-size-xl), calc(22px + 1.95vw), 50px);
+}
+
+/* medium eyebrow above boxed lists and sliders (source .a-eyebrow.-medium) */
+main .section.cards-boxed-container .default-content-wrapper > p:has(+ h2) {
+  font-size: 16px;
+}
+
+/* sector slider intro (source c11 header): medium eyebrow and a small sentence-case heading */
+main .section.cards-slider-container .default-content-wrapper > h2 {
+  font-size: var(--heading-font-size-m);
+  line-height: 1.32;
+  text-transform: none;
+}
+
+main .section.cards-slider-container .default-content-wrapper > p:has(+ h2) {
+  font-size: 16px;
+}
+
+/* newsletter signup band (source c96): small heading, wide copy column, form at the right */
+main .section.form-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+main .section.form-container .default-content-wrapper h2,
+main .section.form-container .default-content-wrapper h4 {
+  margin-bottom: 16px;
+  font-size: var(--heading-font-size-m);
+  line-height: 1.32;
+}
+
+main .section.form-container .default-content-wrapper p {
+  font-weight: 300;
+}
+
+/* photo behind the section content: newsletter with background image, ticket banners */
+main .section.background,
+main .section.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+main .section.background > div,
+main .section.banner > div {
+  position: static;
+}
+
+main .section.background .default-content-wrapper > p:first-child:has(picture),
+main .section.banner .default-content-wrapper > p:first-child:has(picture) {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+main .section.background .default-content-wrapper > p:first-child:has(picture) img,
+main .section.banner .default-content-wrapper > p:first-child:has(picture) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .section.background .default-content-wrapper > :not(:first-child),
+main .section.background > div:not(.default-content-wrapper),
+main .section.banner .default-content-wrapper > :not(:first-child) {
+  position: relative;
+}
+
+main .section.background {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+main .section.background .default-content-wrapper h2,
+main .section.background .default-content-wrapper h4 {
+  max-width: 644px;
+  font-size: var(--heading-font-size-l);
+}
+
+main .section.background .default-content-wrapper p:not(:first-child) {
+  max-width: 640px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+main .section.banner {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+main .section.banner .default-content-wrapper > p:first-child:has(picture)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 35%);
+}
+
+main .section.banner .default-content-wrapper h2,
+main .section.banner .default-content-wrapper h3 {
+  margin-bottom: 30px;
+  font-size: var(--heading-font-size-xl);
+  line-height: 1.43;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+main .section.banner .default-content-wrapper > p:not(:first-child, .button-container) {
+  margin-bottom: 50px;
+}
+
+/* large white pill with arrow (source .m-button -primary -white -large) */
+main .section.banner a.button:any-link {
+  min-width: 235px;
+  min-height: 55px;
+  padding: 0 20px 0 40px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+
+main .section.banner a.button::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M9.3 3.3 8.6 4l3.5 3.5H2v1h10.1L8.6 12l.7.7L14 8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+main .section.banner .default-content-wrapper p:not(:first-child, .button-container) {
+  font-size: 21px;
 }
 
 @media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+  main .section.background > div {
+    max-width: var(--content-max-width);
+  }
+
+  main .section.background .form-wrapper {
+    max-width: calc(420px + 2 * var(--content-padding));
+    margin: 24px 0 0;
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+/* default content beside the block (newsletter signup) */
+@media (width >= 900px) {
+  main .section.split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+    column-gap: 64px;
+    box-sizing: border-box;
+  }
+
+  main .section.split > div {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  main .section.split.dark,
+  main .section.split.white,
+  main .section.split.light-beige {
+    max-width: none;
+    padding-left: max(var(--content-padding), calc((100% - var(--content-max-width)) / 2 + var(--content-padding)));
+    padding-right: max(var(--content-padding), calc((100% - var(--content-max-width)) / 2 + var(--content-padding)));
+  }
+
+  /* newsletter: 820px copy column, form pushed to the right edge */
+  main .section.split.form-container {
+    grid-template-columns: minmax(0, 820px) minmax(0, 420px);
+    justify-content: space-between;
+  }
+}
+
+/* full-bleed cover image band above an overlapping article card */
+main .section.cover {
+  padding: 0;
+}
+
+main .section.cover > div {
+  max-width: none;
+  padding: 0;
+}
+
+main .section.cover p {
   margin: 0;
-  padding: 40px 0;
+}
+
+main .section.cover img {
+  display: block;
+  width: 100%;
+  height: max(280px, calc(100vh - 120px));
+  object-fit: cover;
+}
+
+
+/*
+ * Article pages (template: article). The article section is the one holding the share bar;
+ * body.article comes from page metadata on the live site.
+ */
+main .section:has(.columns-share-wrapper) > div {
+  max-width: calc(var(--article-width) + 2 * var(--content-padding));
+}
+
+main .section:has(.columns-share-wrapper) .default-content-wrapper {
+  color: var(--article-text-color);
+}
+
+main .section:has(.columns-share-wrapper) .default-content-wrapper p {
+  margin-bottom: 32px;
+}
+
+main .section:has(.columns-share-wrapper) .default-content-wrapper p > a:not(.button):any-link {
+  color: var(--accent-color);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+main .section:has(.columns-share-wrapper) .default-content-wrapper picture img {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* newsroom article: sentence-case headline, date beside the summary with a divider */
+main .section:has(.columns-share-wrapper) h1 {
+  margin-bottom: 0;
+  color: var(--text-color);
+  font-size: var(--heading-font-size-l);
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+main .section:not(.white):has(.columns-share-wrapper) .default-content-wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 16px;
+}
+
+main .section:not(.white):has(.columns-share-wrapper) .default-content-wrapper > * {
+  grid-column: 1 / -1;
+}
+
+main .section:not(.white):has(.columns-share-wrapper) .default-content-wrapper > h1 + p {
+  grid-column: 1;
+  align-self: start;
+  margin: 32px 0;
+  padding-right: 14px;
+  border-right: 1px solid var(--neom-grey-line);
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  line-height: 1.93;
+  white-space: nowrap;
+}
+
+main .section:not(.white):has(.columns-share-wrapper) .default-content-wrapper > h1 + p + p {
+  grid-column: 2;
+  margin: 32px 0;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* topic tag: outlined pill (source .tag-label) */
+main .section:has(.columns-share-wrapper) a.button:any-link {
+  min-height: 40px;
+  padding: 0 24px;
+  border-color: var(--neom-black);
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--neom-black);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+main .section:has(.columns-share-wrapper) a.button:hover {
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+/* Sports Club article: white card overlapping the cover photo, date above an uppercase headline */
+main .section.cover + .section.white:has(.columns-share-wrapper) {
+  padding-top: 0;
+  padding-bottom: 120px;
+  background-color: transparent;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) > div {
+  display: flow-root;
+  max-width: 860px;
+  padding: 0 var(--content-padding);
+  background-color: var(--neom-white);
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) > div:first-child {
+  position: relative;
+  margin-top: -120px;
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) > div:last-child {
+  padding-bottom: 60px;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) .default-content-wrapper p {
+  margin-bottom: 24px;
+}
+
+/* the share buttons follow the last paragraph directly on the source */
+main .section.cover + .section.white:has(.columns-share-wrapper) .default-content-wrapper > p:last-child {
+  margin-bottom: 0;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) .default-content-wrapper > p:has(+ h1) {
+  margin-bottom: 20px;
+  color: var(--article-text-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) h1 {
+  margin-bottom: 60px;
+  font-size: var(--heading-font-size-xl);
+  line-height: 1.43;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+main .section.cover + .section.white:has(.columns-share-wrapper) h1 + p,
+main .section.cover + .section.white:has(.columns-share-wrapper) h1 + p + p {
+  margin-bottom: 24px;
+  color: var(--article-text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: var(--body-font-weight);
+}
+
+@media (width >= 900px) {
+  main .section.cover + .section.white:has(.columns-share-wrapper) > div {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+  main .section.cover + .section.white:has(.columns-share-wrapper) > div:first-child {
+    margin-top: -120px;
+    padding-top: 60px;
+  }
+}
+
+/* eyebrow: a short line of default content right above a heading (source .a-eyebrow) */
+main .default-content-wrapper > p:has(+ h2),
+main .default-content-wrapper > p:has(+ h3) {
+  margin-bottom: 16px;
+  color: var(--accent-color);
+  font-size: var(--eyebrow-font-size);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+main .section.dark .default-content-wrapper > p:has(+ h2),
+main .section.dark .default-content-wrapper > p:has(+ h3) {
+  color: var(--accent-on-dark-color);
 }

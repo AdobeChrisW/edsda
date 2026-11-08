@@ -1,0 +1,35 @@
+{
+  "variantName": "carousel-split",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Auto-advancing slides with text left and image right, selected by labelled progress-bar tabs",
+    "notes": [
+      "Cream background; each slide = gold eyebrow \"Our Tracks\", uppercase h2, body text, dark pill \"Read more\" on the left, large image on the right; below, three labels (Accelerate Progress / Embedding Value / Enhancing Quality of Life) with timed progress bars select the slide."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per slide: cell 1 = image, cell 2 = eyebrow paragraph + h2 + paragraph + CTA link; the h2 also labels the slide tab",
+    "patterns": [
+      "text left, image right",
+      "eyebrow + h2 + text + pill CTA",
+      "labelled progress-bar tabs under the slides"
+    ],
+    "blockContent": [
+      "3 slides (Accelerate Progress, Embedding Value, Enhancing Quality of Life), each eyebrow + h2 + text + Read more link to a detail page + image; labelled progress-bar navigation"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about/social-responsibility",
+  "usage": {
+    "description": "A small set (2-4) of themed highlights with a read-more link each.",
+    "pagesUsing": [
+      "/en-us/about/social-responsibility"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for text + image slides with labelled tabs. Use carousel-hero-video for full-bleed video hero slides, columns-media for static image/text rows."
+}

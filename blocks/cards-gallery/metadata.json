@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-gallery",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Grid of landscape photos with captions that open an image lightbox",
+    "notes": [
+      "Cream background; small gold uppercase eyebrow and large uppercase heading, centred; 3-up landscape photos with uppercase captions; each opens a lightbox (image only, despite the component name)."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per item: cell 1 = image (opens lightbox), cell 2 = caption paragraph",
+    "patterns": [
+      "landscape image + caption",
+      "opens image lightbox",
+      "3-up grid"
+    ],
+    "blockContent": [
+      "3 gallery items, each landscape photo + uppercase caption, opening an image lightbox"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    {
+      "style": "centered"
+    }
+  ],
+  "sourceUrl": "https://www.neom.com/en-us/regions/theline",
+  "usage": {
+    "description": "Photo galleries with captions.",
+    "pagesUsing": [
+      "/en-us/regions/theline"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for images that enlarge in a lightbox. Use cards-video for video posters, cards for linked cards."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/regions/theline",
+  "path": "en-us/regions/theline",
+  "timestamp": "2026-11-07T17:43:29.028Z",
+  "title": "THE LINE: A New Urban Future",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "columns-media",
+    "breadcrumbs",
+    "cards-news",
+    "form",
+    "cards-boxed",
+    "cards-gallery"
+  ]
+}

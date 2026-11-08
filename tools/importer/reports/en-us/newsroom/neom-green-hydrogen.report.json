@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/newsroom/neom-green-hydrogen",
+  "path": "en-us/newsroom/neom-green-hydrogen",
+  "timestamp": "2026-11-07T19:31:10.847Z",
+  "title": "David Edmondson as NEOM Green Hydrogen Company’s CEO",
+  "template": "newsroom-2",
+  "blocks": [
+    "breadcrumbs",
+    "columns-share",
+    "cards-news",
+    "form"
+  ]
+}

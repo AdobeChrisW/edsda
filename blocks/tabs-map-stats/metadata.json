@@ -1,0 +1,36 @@
+{
+  "variantName": "tabs-map-stats",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Region explorer: vertical tabs, each panel showing a map with numbered hotspot links, a stat grid, body copy and an arrow link",
+    "notes": [
+      "Dark (#343538) panel with intro video and cloud/satellite map imagery behind; left vertical tab list (About Us / Our Region / Our Nature) with gold active underline; centre map with numbered region hotspots; right column of gold stat values with uppercase captions, paragraph and arrow link. Photo/video background belongs to the block, so section not colored."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional single-cell rows for intro heading or background image; then one row per tab: cell 1 = tab label, cell 2 = map image, bulleted list of hotspot links, stat paragraphs (bold value + caption), paragraph, arrow link",
+    "patterns": [
+      "vertical tab list left",
+      "map image with numbered hotspot links",
+      "stat grid (value + caption)",
+      "arrow text link"
+    ],
+    "blockContent": [
+      "3 tab panels (About Us, Our Region, Our Nature); each: map image, region/landscape hotspot links (Trojena, THE LINE, Oxagon, Islands of NEOM, Magna / Marine Landscapes, Lower Desert, Mountain, Upper Valley), 4 stats (value + caption), paragraph, arrow link"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Tabbed overview with map and key figures.",
+    "pagesUsing": [
+      "/en-us"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use when each tab pairs a map/visual with stats. Use plain tabs for text-only panels."
+}

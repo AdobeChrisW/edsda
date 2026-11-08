@@ -1,0 +1,39 @@
+{
+  "variantName": "form",
+  "baseBlock": "form",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Email newsletter signup form (email input + submit button)",
+    "notes": [
+      "Dark #1d1f22 band; heading + paragraph on the left, email input with Sign up button on the right."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional key/value rows: action (submit URL), label, placeholder, button, success, error; a single-cell row with a link also sets the submit URL. With no rows it renders an email field and a Sign up button",
+    "patterns": [
+      "email input + submit button",
+      "no variant: forms keep the name form"
+    ],
+    "blockContent": [
+      "Email signup form: email field + Sign up button"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    {
+      "style": "dark, split"
+    }
+  ],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Newsletter signup band; place heading and text as default content beside it in a split section.",
+    "pagesUsing": [
+      "/en-us",
+      "/en-us/newsroom/neom-green-hydrogen"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for single-field email signups. Multi-field forms need a different form model."
+}

@@ -1,0 +1,274 @@
+/*
+ * cards-boxed: translucent boxes (icon, h3, text, pill link) over a full-bleed photo.
+ * Values from neom.com .cmp-c18-boxed-list computed styles
+ * (see migration-work/cards-boxed-extracted.css).
+ */
+
+/* The optional background photo covers the whole hosting section (edge to edge,
+   including any heading authored above the block), like the source component. */
+main > .section.cards-boxed-container:has(.cards-boxed-has-background) {
+  position: relative;
+  isolation: isolate;
+  padding: 40px 0;
+  background-color: var(--neom-beige);
+}
+
+main > .section.cards-boxed-container:has(.cards-boxed-has-background) > .default-content-wrapper {
+  color: var(--neom-white);
+  text-align: center;
+}
+
+main > .section.cards-boxed-container:has(.cards-boxed-has-background) > .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--neom-white);
+}
+
+main > .section > .cards-boxed-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* source b-boxedList__header always keeps margin-bottom: 24px above the cards */
+.cards-boxed {
+  padding-top: 24px;
+  color: var(--neom-white);
+}
+
+.cards-boxed .cards-boxed-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.cards-boxed .cards-boxed-background p {
+  margin: 0;
+}
+
+.cards-boxed .cards-boxed-background picture,
+.cards-boxed .cards-boxed-background img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* source m-componentBackground::after darkening mask */
+.cards-boxed .cards-boxed-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 33.3%), rgb(0 0 0));
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* mobile: horizontal slider */
+.cards-boxed .cards-boxed-list {
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 20px;
+  scrollbar-width: none;
+}
+
+.cards-boxed .cards-boxed-list::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-boxed .cards-boxed-card {
+  box-sizing: border-box;
+  flex: 0 0 320px;
+  max-width: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  background-color: rgb(29 31 34 / 40%);
+  scroll-snap-align: start;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* no photo: dark boxes (source t-dark variant) */
+.cards-boxed:not(.cards-boxed-has-background) .cards-boxed-card {
+  border-color: rgb(86 87 89);
+  background-color: transparent;
+}
+
+@media (hover: hover) {
+  .cards-boxed.cards-boxed-has-background .cards-boxed-card:hover {
+    background-color: rgb(29 31 34 / 80%);
+  }
+
+  .cards-boxed:not(.cards-boxed-has-background) .cards-boxed-card:hover {
+    background-color: rgb(0 0 0);
+  }
+}
+
+.cards-boxed .cards-boxed-card-icon {
+  display: flex;
+  align-items: flex-end;
+  height: 64px;
+  margin-bottom: 32px;
+}
+
+.cards-boxed .cards-boxed-card-icon p {
+  margin: 0;
+}
+
+.cards-boxed .cards-boxed-card-icon img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+/* linked source SVG icons carry no fill (render black); source paints them white */
+.cards-boxed .cards-boxed-card-icon img[src$='.svg'] {
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* centered option (source o-boxedCard -center) */
+.cards-boxed.centered .cards-boxed-card {
+  text-align: center;
+}
+
+.cards-boxed.centered .cards-boxed-card-icon {
+  justify-content: center;
+}
+
+.cards-boxed .cards-boxed-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cards-boxed .cards-boxed-card-body h3 {
+  margin: 0 0 16px;
+  color: var(--neom-white);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1.83px;
+  text-transform: uppercase;
+}
+
+.cards-boxed .cards-boxed-card-body p {
+  margin: 0 0 32px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.cards-boxed .cards-boxed-card-body p.cards-boxed-card-link {
+  margin: auto 0 0;
+}
+
+/* outline pill link with arrow */
+main .cards-boxed .cards-boxed-card-link a:any-link,
+main .cards-boxed .cards-boxed-card-link a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  min-height: 0;
+  padding: 9px 24px 7px 28px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 30px;
+  background-color: transparent;
+  color: var(--neom-white);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color var(--button-transition), color var(--button-transition), border-color var(--button-transition);
+}
+
+main .cards-boxed .cards-boxed-card-link a::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-inline-start: 15px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M22.5 12.4a.5.5 0 000-.8l-5.8-5a.5.5 0 00-.7.7l2.6 4H2.1a.8.8 0 000 1.4h16.5l-2.6 4a.5.5 0 00.7.7l5.8-5z' clip-rule='evenodd'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+[dir='rtl'] main .cards-boxed .cards-boxed-card-link a::after {
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+  main .cards-boxed .cards-boxed-card-link a:hover {
+    border-color: var(--neom-white);
+    background-color: var(--neom-white);
+    color: var(--neom-black);
+  }
+}
+
+main .cards-boxed .cards-boxed-card-link a:focus-visible {
+  border-color: var(--neom-white);
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+}
+
+/* dot pagination: only shown while the list scrolls (mobile slider) */
+.cards-boxed .cards-boxed-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-boxed.cards-boxed-scrollable .cards-boxed-dots {
+  display: flex;
+}
+
+.cards-boxed .cards-boxed-dots button {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--neom-white);
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.cards-boxed:not(.cards-boxed-has-background) .cards-boxed-dots button {
+  background-color: var(--neom-black);
+}
+
+.cards-boxed .cards-boxed-dots .active button {
+  opacity: 1;
+}
+
+@media (width >= 900px) {
+  /* photo sections with a header (theline) use 64px; header-less ones (about) keep 40px */
+  main > .section.cards-boxed-container:has(.cards-boxed-has-background):has(> .default-content-wrapper) {
+    padding: 64px 0;
+  }
+
+  .cards-boxed .cards-boxed-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    padding: 0 64px;
+    overflow: visible;
+  }
+
+  /* source spaces boxes with a trailing margin (also on the last box) */
+  .cards-boxed .cards-boxed-card {
+    margin-inline-end: 24px;
+  }
+}

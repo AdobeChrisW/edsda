@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-video",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Staggered 3-column grid of portrait video posters with play buttons that open the video in an overlay",
+    "notes": [
+      "Light beige band (#f3efe5, differs from page #f9f7f2); large uppercase \"MATCH MOMENTS\" top-left; 3-column staggered masonry of portrait video posters with white round play buttons and captions below; each plays its video in an overlay."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per story: cell 1 = poster image + link to the video (.mp4/Scene7), cell 2 = caption paragraph",
+    "patterns": [
+      "portrait poster + video link per card",
+      "white play button",
+      "caption below",
+      "staggered 3-column masonry"
+    ],
+    "blockContent": [
+      "6 video story cards, each portrait poster + play button + caption; the video opens in an overlay; staggered 3-column layout"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    {
+      "style": "light-beige"
+    }
+  ],
+  "sourceUrl": "https://www.neom.com/en-us/neom-sports-club",
+  "usage": {
+    "description": "Short video stories / match moments.",
+    "pagesUsing": [
+      "/en-us/neom-sports-club"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for video posters that play in an overlay. Use cards-gallery for images in a lightbox."
+}

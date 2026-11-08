@@ -1,0 +1,384 @@
+/*
+ * cards-timeline: source .cmp-c33-grouped-content-slider.-timeline (neom.com)
+ * mobile values from 390px, desktop values from 1440px computed styles.
+ */
+
+/* the section hosts the eyebrow heading on top of the block photo */
+main > .section.cards-timeline-container {
+  position: relative;
+  padding: 0;
+}
+
+main > .section.cards-timeline-container > .default-content-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  right: 22px;
+  z-index: 2;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+main > .section.cards-timeline-container > .default-content-wrapper > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: var(--neom-white);
+  font-family: var(--heading-font-family);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28.34px;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+.cards-timeline-container .cards-timeline-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.cards-timeline {
+  --ct-pad: 0px;
+  --ct-track-top: 50px;
+
+  position: relative;
+  padding: var(--ct-pad) 0;
+  overflow: hidden;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+  font-family: var(--body-font-family);
+}
+
+.cards-timeline.cards-timeline-has-background,
+.cards-timeline-container:has(> .default-content-wrapper) .cards-timeline {
+  --ct-pad: 20px;
+}
+
+/* dotted timeline running edge to edge behind the year dots */
+.cards-timeline::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--ct-pad) + var(--ct-track-top) + 49px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-bottom: 1px dotted rgb(255 255 255 / 30%);
+  pointer-events: none;
+}
+
+.cards-timeline .cards-timeline-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cards-timeline .cards-timeline-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 33.3%), rgb(0 0 0));
+  opacity: 0.3;
+}
+
+.cards-timeline .cards-timeline-background p {
+  margin: 0;
+}
+
+.cards-timeline .cards-timeline-background picture,
+.cards-timeline .cards-timeline-background img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* prev / next: 60px outlined circles with arrow icons */
+.cards-timeline .cards-timeline-controls {
+  position: absolute;
+  top: 90px;
+  right: 35px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  gap: 20px;
+}
+
+.cards-timeline .cards-timeline-controls button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 60px;
+  background: transparent;
+  color: var(--neom-white);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cards-timeline .cards-timeline-controls button:disabled {
+  opacity: 1;
+  color: rgb(255 255 255 / 10%);
+  cursor: default;
+}
+
+.cards-timeline .cards-timeline-controls button:hover:not(:disabled) {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.cards-timeline .cards-timeline-controls button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M22.5 12.4a.5.5 0 000-.8l-5.8-5a.5.5 0 00-.7.7l2.6 4H2.1a.8.8 0 000 1.4h16.5l-2.6 4a.5.5 0 00.7.7l5.8-5z'/%3E%3C/svg%3E") center / 24px no-repeat;
+}
+
+.cards-timeline .cards-timeline-controls .cards-timeline-prev::after {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+/* track */
+.cards-timeline .cards-timeline-track {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: var(--ct-track-top) 0 130px;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards-timeline .cards-timeline-track::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-timeline .cards-timeline-card {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 21px 0 22px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+/* year label (source .b-groupedContentSlider__itemLabel h2) + dot on the line */
+.cards-timeline .cards-timeline-year {
+  position: relative;
+  box-sizing: border-box;
+  height: 70px;
+  margin-left: -2px;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.19px;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+  color: var(--neom-white);
+}
+
+.cards-timeline .cards-timeline-dot {
+  position: absolute;
+  top: 49px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--neom-white);
+  transform: translate(-50%, -50%);
+}
+
+.cards-timeline .cards-timeline-card.active .cards-timeline-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--neom-gold-light);
+}
+
+/* card (source .o-timelineCard__container) */
+.cards-timeline .cards-timeline-card-body {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 320px;
+  padding: 70px 32px 40px;
+  background-color: rgb(255 255 255 / 5%);
+  backdrop-filter: blur(20px);
+  color: var(--neom-white);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  transition: 0.25s linear;
+}
+
+.cards-timeline .cards-timeline-card-body p {
+  margin: 0 0 24px;
+}
+
+.cards-timeline .cards-timeline-card-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* source entries are one text run with <br><br> between paragraphs: render the
+   authored paragraphs the same way so the blank line counts toward the clamp */
+.cards-timeline :where(.cards-timeline-card:not(.cards-timeline-card-media)) .cards-timeline-card-content > p {
+  display: inline;
+  margin: 0;
+}
+
+.cards-timeline :where(.cards-timeline-card:not(.cards-timeline-card-media)) .cards-timeline-card-content > p + p::before {
+  content: '\A\A';
+  white-space: pre;
+}
+
+.cards-timeline .cards-timeline-card.active .cards-timeline-card-body {
+  min-height: 375px;
+  background-color: #f5f3ea;
+  color: var(--neom-black);
+}
+
+/* media cards (sports club: logo, label, link) */
+.cards-timeline .cards-timeline-card.cards-timeline-card-media .cards-timeline-card-body {
+  min-height: 0;
+  padding-top: 64px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 40.03px;
+}
+
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body p:has(> picture) {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body picture,
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* "Previous match" label followed by the fixture */
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body p:not(:has(picture), .button-container):has(+ p:not(.button-container)) {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body p:not(:has(picture), .button-container) + p:not(.button-container) {
+  margin-top: 4px;
+  font-size: 25.2px;
+  line-height: 27.72px;
+}
+
+/* a lone label (league name) is centred in the same 130px text area as a fixture */
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body p:has(> picture) + p:not(.button-container):is(:last-child, :has(+ .button-container)) {
+  padding-block: 45px;
+}
+
+.cards-timeline .cards-timeline-card-media .cards-timeline-card-body .button-container {
+  margin: 33px 0 0;
+}
+
+.cards-timeline .cards-timeline-card-media:not(.active) .cards-timeline-card-body .button-container {
+  display: none;
+}
+
+/* inactive text cards are clamped (source -webkit-line-clamp: 6 incl. the blank line) */
+.cards-timeline .cards-timeline-card:not(.active, .cards-timeline-card-media) .cards-timeline-card-content {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+/* source mobile: inactive year cards are 250px, the active card fills the slide */
+@media (width < 900px) {
+  .cards-timeline .cards-timeline-card:not(.active, .cards-timeline-card-media) .cards-timeline-card-body {
+    width: 250px;
+    max-width: 100%;
+  }
+}
+
+main .cards-timeline a.button:any-link {
+  padding: 0 20px;
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+main .cards-timeline a.button:hover,
+main .cards-timeline a.button:focus-visible {
+  background-color: var(--neom-gold);
+  color: var(--neom-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-timeline .cards-timeline-card-body,
+  .cards-timeline .cards-timeline-controls button {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  main > .section.cards-timeline-container > .default-content-wrapper {
+    top: 70px;
+    left: 70px;
+    right: 70px;
+  }
+
+  main > .section.cards-timeline-container > .default-content-wrapper > :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 28px;
+    line-height: 40.03px;
+  }
+
+  .cards-timeline {
+    --ct-track-top: 130px;
+  }
+
+  .cards-timeline.cards-timeline-has-background,
+  .cards-timeline-container:has(> .default-content-wrapper) .cards-timeline {
+    --ct-pad: 70px;
+  }
+
+  .cards-timeline .cards-timeline-track {
+    gap: 60px;
+    margin-bottom: 75px;
+    padding-inline-start: 70px;
+    scroll-padding-inline-start: 70px;
+  }
+
+  .cards-timeline .cards-timeline-card {
+    flex-basis: 25.443%;
+    padding: 0;
+  }
+
+  .cards-timeline .cards-timeline-year {
+    margin-left: 0;
+    line-height: 22.39px;
+  }
+
+  .cards-timeline .cards-timeline-card-body {
+    width: 310px;
+    max-width: 100%;
+    min-height: 310px;
+  }
+
+  .cards-timeline .cards-timeline-card.cards-timeline-card-media .cards-timeline-card-body {
+    width: 320px;
+    min-height: 357px;
+  }
+
+  /* the taller active media card overhangs the 375px slide row on the source */
+  .cards-timeline:has(.cards-timeline-card-media) .cards-timeline-track {
+    margin-bottom: 29px;
+  }
+}

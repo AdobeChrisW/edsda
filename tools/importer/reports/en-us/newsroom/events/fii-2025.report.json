@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/newsroom/events/fii-2025",
+  "path": "en-us/newsroom/events/fii-2025",
+  "timestamp": "2026-11-07T18:09:38.673Z",
+  "title": "FII 2025",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "columns-media",
+    "columns-media",
+    "cards-slider",
+    "form"
+  ]
+}

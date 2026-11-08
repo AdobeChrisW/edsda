@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-hero-video",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-bleed homepage hero carousel with autoplay background video slides and timed progress-bar pagination",
+    "notes": [
+      "Full-bleed autoplay video slides (dark #1d1f22 fallback), uppercase white heading bottom-left, subheading, white pill CTA, timed progress-bar pagination along the bottom. Video/photo background belongs to the block, so the section is not colored."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per slide; cell 1 = background media (poster image and/or a link to an .mp4 or Scene7 video), cell 2 = h2 title + subheading paragraph + CTA link",
+    "patterns": [
+      "full-bleed video or image slides",
+      "timed progress-bar pagination",
+      "text bottom-left with CTA"
+    ],
+    "blockContent": [
+      "2 slides: \"Powering Data\" (video, Watch full video button) and \"A gateway on the Red Sea\" (video, Discover More to portofneom.com); each slide = background video/poster + h2 + subheading + CTA"
+    ]
+  },
+  "options": [
+    "short",
+    "large-title",
+    "small-title",
+    "inline-subtitle",
+    "classic"
+  ],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Top-of-page hero with one or more video or image slides that auto-advance.",
+    "pagesUsing": [
+      "/en-us"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for any full-bleed rotating hero. Use hero for a single static slide."
+}

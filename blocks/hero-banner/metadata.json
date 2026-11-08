@@ -1,0 +1,35 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Static full-height hero with background photo and bottom-left title and subline",
+    "notes": [
+      "Full-height static hero: desert sunset photo, uppercase white h1 \"OUR LEADERSHIP\" and subline bottom-left, dark gradient at the bottom. Photo belongs to the block, so the section is not colored."
+    ]
+  },
+  "contentPattern": {
+    "structure": "row 1 = background image; row 2 = h1 + subline paragraph (image and text may also share one row as two cells)",
+    "patterns": [
+      "full-bleed background image",
+      "h1 + subline bottom-left",
+      "no CTA, no pagination"
+    ],
+    "blockContent": [
+      "Background photo + h1 \"Our Leadership\" + subline \"Meet the executive team\""
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about/leadership",
+  "usage": {
+    "description": "Top-of-page banner for inner landing pages (e.g. Our Leadership).",
+    "pagesUsing": [
+      "/en-us/about/leadership"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for a single static page banner. Use carousel-hero-video for rotating video slides."
+}

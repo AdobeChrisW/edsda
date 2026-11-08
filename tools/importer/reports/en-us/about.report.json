@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/about",
+  "path": "en-us/about",
+  "timestamp": "2026-11-07T17:42:19.186Z",
+  "title": "NEOM: A Region in The Making",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "columns-media",
+    "columns-media",
+    "breadcrumbs",
+    "cards-slider",
+    "cards-news",
+    "form",
+    "cards-boxed",
+    "cards-timeline"
+  ]
+}

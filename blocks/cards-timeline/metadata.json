@@ -1,0 +1,36 @@
+{
+  "variantName": "cards-timeline",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Horizontal year-by-year timeline slider over a background photo, active entry highlighted",
+    "notes": [
+      "Full-bleed sunset mountain photo; uppercase white \"OUR STORY\" top-left, round prev/next arrows top-right; horizontal timeline line with dots and year labels; translucent cards, the active one cream with dark text. Photo background belongs to the block, so the section is not colored."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional first single-cell row = background image; then one row per entry, single cell: bold year paragraph + milestone paragraph(s)",
+    "patterns": [
+      "optional first single-cell row = background image",
+      "year label + milestone text per card",
+      "timeline line with dots, active card highlighted",
+      "prev/next arrows"
+    ],
+    "blockContent": [
+      "7 timeline entries 2019-2025, each year + 1-2 short milestone sentences; horizontal slider with arrows over a background photo"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about",
+  "usage": {
+    "description": "Company history / milestones by year.",
+    "pagesUsing": [
+      "/en-us/about"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for dated milestones on a timeline line. Use cards-slider for image cards in a horizontal scroller."
+}

@@ -1,0 +1,35 @@
+{
+  "variantName": "cards-boxed",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Translucent link boxes (icon, title, text, pill link) over a full-bleed background photo",
+    "notes": [
+      "Full-bleed mountain photo behind three translucent dark glass boxes; each box: white line icon, uppercase h3, short text, outline pill \"Find out more\" with arrow. Becomes a dot-paginated slider on mobile. The photo background belongs to the block, so the section is not colored (visual-trees records #f3efe5 under the photo)."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional first single-cell row = background image; then one row per box: cell 1 = icon image, cell 2 = h3 + text + link",
+    "patterns": [
+      "optional first single-cell row = background image",
+      "icon + h3 + text + outline pill link",
+      "translucent glass boxes"
+    ],
+    "blockContent": [
+      "3 boxes (Our Name, Our Leadership, Our Values), each icon + h3 + text + Find out more link to an about detail page; full-bleed background photo"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about",
+  "usage": {
+    "description": "Three to four section entry points (e.g. about sub-pages) laid over a landscape photo; slider with dots on mobile.",
+    "pagesUsing": [
+      "/en-us/about"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for icon + title + link boxes over a photo. Use cards for a plain grid of image cards, cards-slider for tall photo cards."
+}

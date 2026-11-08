@@ -1,0 +1,240 @@
+/*
+ * columns-media
+ * Source: neom.com .cmp-c09-content-group (rows of image/text; -assetPull rows bleed the image
+ * to the viewport edge) and .cmp-c24-content:has(img) (single row split in two halves).
+ * The block runs edge to edge; it sets its own 20px (mobile) / 70px (desktop) gutters.
+ * Row classes (pull, split) and the square option are resolved in columns-media.js.
+ */
+
+main > .section > .columns-media-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.columns-media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.columns-media .columns-media-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* image always on top on mobile */
+.columns-media .columns-media-image {
+  order: -1;
+}
+
+.columns-media .columns-media-image p {
+  margin: 0;
+}
+
+.columns-media .columns-media-image picture,
+.columns-media .columns-media-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* source figures are -widescreen (16:9, cover) or -square */
+.columns-media .columns-media-image img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.columns-media.square .columns-media-image img {
+  aspect-ratio: 1;
+}
+
+/* typography */
+.columns-media .columns-media-content > :first-child {
+  margin-top: 0;
+}
+
+.columns-media .columns-media-content > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-media .columns-media-content .columns-media-eyebrow {
+  margin: 0 0 28px;
+  color: var(--accent-color);
+  font-size: var(--eyebrow-font-size);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+main .section.dark .columns-media .columns-media-eyebrow {
+  color: var(--accent-on-dark-color);
+}
+
+.columns-media .columns-media-content h2,
+.columns-media .columns-media-content h3 {
+  margin: 0 0 30px;
+  font-size: 21px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.columns-media .columns-media-content p {
+  margin: 0 0 24px;
+}
+
+.columns-media .columns-media-content .button-container {
+  margin: 40px 0 0;
+}
+
+/* source a-heading -h5 tier */
+.columns-media.large-heading .columns-media-content h2 {
+  font-size: 28px;
+  line-height: 1.43;
+}
+
+/* CTA hover: gold pill, white label (source .m-button:hover) */
+main .columns-media .columns-media-content a.button:hover,
+main .columns-media .columns-media-content a.button:focus-visible {
+  border-color: transparent;
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+/* single row split (source c24): image bleeds to the viewport edge */
+.columns-media .columns-media-split .columns-media-image {
+  margin: 0 -20px;
+}
+
+.columns-media .columns-media-split .button-container {
+  margin-top: 50px;
+}
+
+/* c24 CTA: taller pill with a trailing arrow */
+main .columns-media .columns-media-split a.button:any-link {
+  gap: 0;
+  min-width: 235px;
+  min-height: 55px;
+  padding: 0 14px 0 28px;
+}
+
+main .columns-media .columns-media-split a.button::after {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-left: 10.67px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M22.5 12.4a.5.5 0 0 0 0-.8l-5.8-5a.5.5 0 0 0-.7.7l2.6 4H2.1a.8.8 0 0 0 0 1.4h16.5l-2.6 4a.5.5 0 0 0 .7.7l5.8-5z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* on dark the c24 CTA is the large white pill (source .m-button -primary -white -large) */
+main .section.dark .columns-media .columns-media-split a.button:any-link {
+  padding: 0 20px 0 40px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+
+main .section.dark .columns-media .columns-media-split a.button::after {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+@media (width >= 900px) {
+  .columns-media {
+    gap: 70px;
+    padding: 0;
+  }
+
+  /* 12-column grid, 20px gutters, 70px side padding */
+  .columns-media .columns-media-row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 1780px;
+    margin: 0 auto;
+    padding: 0 70px;
+    box-sizing: border-box;
+  }
+
+  .columns-media .columns-media-row > div {
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .columns-media .columns-media-image {
+    order: 0;
+  }
+
+  /* inset rows: image and text 5 columns each */
+  .columns-media .columns-media-image-first > .columns-media-image {
+    grid-column: 1 / span 5;
+  }
+
+  .columns-media .columns-media-image-first > .columns-media-content {
+    grid-column: 7 / span 5;
+  }
+
+  .columns-media .columns-media-image-last > .columns-media-content {
+    grid-column: 2 / span 5;
+  }
+
+  .columns-media .columns-media-image-last > .columns-media-image {
+    grid-column: 8 / span 5;
+  }
+
+  /* pull rows (source -assetPull): 4 text columns, the image takes the side gutter too */
+  .columns-media .columns-media-pull.columns-media-image-first > .columns-media-image {
+    margin-left: -70px;
+  }
+
+  .columns-media .columns-media-pull.columns-media-image-first > .columns-media-content {
+    grid-column: 8 / span 4;
+  }
+
+  .columns-media .columns-media-pull.columns-media-image-last > .columns-media-content {
+    grid-column: 2 / span 4;
+  }
+
+  .columns-media .columns-media-pull.columns-media-image-last > .columns-media-image {
+    margin-right: -70px;
+  }
+
+  .columns-media .columns-media-content h2,
+  .columns-media .columns-media-content h3 {
+    font-size: var(--heading-font-size-l);
+    line-height: 40px;
+  }
+
+  .columns-media.large-heading .columns-media-content h2 {
+    font-size: var(--heading-font-size-xl);
+    line-height: 1.43;
+  }
+
+  /* single row split (source c24 -double-viewportWidth): two halves, image to the edge */
+  .columns-media .columns-media-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .columns-media .columns-media-row.columns-media-split > .columns-media-content {
+    grid-column: 1;
+    padding: 0 70px;
+  }
+
+  .columns-media .columns-media-row.columns-media-split > .columns-media-image {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .columns-media .columns-media-split .button-container {
+    margin-top: 40px;
+  }
+}

@@ -1,20 +1,320 @@
+/* NEOM footer — values measured on https://www.neom.com/en-us (footer.b-footer) */
+/* stylelint-disable no-descending-specificity */
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  border-top: 4px solid var(--neom-gold);
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+  font-family: var(--body-font-family);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* main band: link groups + social row (mobile: stacked accordion) */
+footer .footer-main {
+  padding: 24px 16px 32px;
+}
+
+footer .footer-sitemap {
+  display: block;
+}
+
+footer .footer-group {
+  padding: 24px 0 16px;
+  border-bottom: 1px solid var(--neom-graphite);
+}
+
+footer .footer-group-heading {
+  margin: 0;
+  color: var(--neom-white);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+footer .footer-group-label {
+  display: none;
+}
+
+footer .footer-group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: 20px;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+footer .footer-group-toggle svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--neom-white);
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+footer .footer-group.is-open .footer-group-toggle svg {
+  transform: rotate(180deg);
+}
+
+footer .footer-links {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+footer .footer-group.is-open .footer-links {
+  max-height: var(--footer-links-height, 600px);
+}
+
+footer .footer-links li {
+  display: flex;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+/* mobile rows are 43.7px tall like the source */
+footer .footer-links a:any-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 43.6875px;
+  color: rgb(255 255 255 / 60%);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+footer .footer-links a:hover,
+footer .footer-links a:focus-visible {
+  color: var(--neom-gold-light);
+}
+
+/* social row: the label only shows on desktop */
+footer .footer-social-label {
+  display: none;
+  color: var(--neom-white);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+footer .footer-social {
+  margin-top: 40px;
+}
+
+footer .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+footer .footer-social-list a {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+footer .footer-social-list svg,
+footer .footer-social-list img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: var(--neom-gold);
+  transition: fill 0.25s;
+}
+
+footer .footer-social-list a:hover svg,
+footer .footer-social-list a:focus-visible svg {
+  fill: #ffe973;
+}
+
+/* bottom band: legal links, copyright, notice (mobile: centered) */
+footer .footer-marginalia {
+  padding: 32px 16px;
+  background-color: #161719;
+  color: rgb(255 255 255 / 60%);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+footer .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 16px;
+}
+
+footer .footer-legal li:not(:last-child)::after {
+  content: '•';
+  margin: 0 19px; /* ~45px from link to link, as on the source */
+}
+
+footer .footer p.footer-notice {
+  margin-top: 32px;
+}
+
+footer .footer-marginalia a:any-link {
+  color: rgb(255 255 255 / 60%);
+  text-decoration: none;
+}
+
+footer .footer-legal a:hover,
+footer .footer-legal a:focus-visible {
+  text-decoration: underline;
+}
+
+footer .footer-copyright,
+footer .footer-notice {
+  color: var(--article-text-color);
+}
+
+footer .footer-copyright {
+  font-weight: 100;
+}
+
+/* breakpoint-exception: the source footer switches to its 4-column layout at 1025px */
+@media (width >= 1025px) {
+  footer .footer-main {
+    padding: 64px 64px 0;
+  }
+
+  footer .footer-sitemap {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+
+  footer .footer-group {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  footer .footer-group + .footer-group {
+    margin-top: 32px;
+  }
+
+  footer .footer-group-label {
+    display: inline;
+  }
+
+  footer .footer-group-toggle {
+    display: none;
+  }
+
+  footer .footer-group-heading {
+    margin-bottom: 16px;
+  }
+
+  footer .footer-links,
+  footer .footer-group.is-open .footer-links {
+    max-height: none;
+    overflow: visible;
+    transition: none;
+  }
+
+  footer .footer-links li {
+    display: block;
+    margin: 0 0 8px;
+  }
+
+  footer .footer-links a:any-link {
+    display: inline-block;
+    min-height: 0;
+  }
+
+  /* social row: label over the first three columns, icons from the start of the last one */
+  footer .footer-social-label {
+    display: block;
+    grid-column: 1 / 4;
+    margin-top: 119px;
+  }
+
+  footer .footer-social {
+    display: flex;
+    grid-column: 4;
+    justify-content: flex-end;
+    margin-top: 119px;
+  }
+
+  /* fills its column and starts at its left edge; a wider row grows and, like the source, overflows to the left */
+  footer .footer-social-list {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    min-width: 100%;
+  }
+
+  /* 1025-1439px: a wide icon row (5+ icons) does not fit its column, so the source drops
+     the label and right-aligns the icons under all columns */
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social-label {
+    display: none;
+  }
+
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social {
+    grid-column: 1 / -1;
+    margin-top: 84px;
+  }
+
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social-list {
+    min-width: 0;
+  }
+
+  /* 1025-1439px: legal links and notice stay centered, stacked */
+  footer .footer-marginalia {
+    margin-top: 32px;
+    padding: 32px 64px;
+  }
+
+  footer .footer p.footer-notice {
+    margin-top: 0;
+  }
+}
+
+/* breakpoint-exception: from 1440px the source shows the social label and a single-row bottom band */
+@media (width >= 1440px) {
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social-label {
+    display: block;
+  }
+
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social {
+    grid-column: 4;
+    margin-top: 119px;
+  }
+
+  footer .footer-sitemap:has(.footer-social-list > li:nth-child(5)) .footer-social-list {
+    min-width: 100%;
+  }
+
+  footer .footer-marginalia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+  }
+
+  footer .footer-legal {
+    justify-content: flex-start;
   }
 }

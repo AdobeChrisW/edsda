@@ -1,0 +1,510 @@
+/* full-bleed hero: the section and wrapper drop the global section padding / max-width */
+main > .section.carousel-hero-video-container {
+  padding: 0;
+}
+
+main > .section > .carousel-hero-video-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.carousel-hero-video {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+.carousel-hero-video .carousel-hero-video-slides {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* all slides share one grid cell; only the active one is visible */
+.carousel-hero-video .carousel-hero-video-slide {
+  grid-area: 1 / 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100dvh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+}
+
+/* short option: source .b-heroSliderV2.-disableFullScreen caps the 100vh hero at 640px */
+.carousel-hero-video.short .carousel-hero-video-slide {
+  min-height: min(100dvh, 640px);
+}
+
+.carousel-hero-video .carousel-hero-video-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-media {
+  position: absolute;
+  inset: 0;
+}
+
+/* source slide::after scrim */
+.carousel-hero-video .carousel-hero-video-slide-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.3;
+  background-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 33.3%), rgb(0 0 0));
+  pointer-events: none;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-media p {
+  margin: 0;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-media picture,
+.carousel-hero-video .carousel-hero-video-slide-media img,
+.carousel-hero-video .carousel-hero-video-slide-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-media video {
+  z-index: 1;
+}
+
+/* copy layer covers the slide and carries the bottom gradient (source __copy.-gradient) */
+.carousel-hero-video .carousel-hero-video-slide-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 20px 20px 96px;
+  background-image: linear-gradient(0deg, rgb(0 0 0), rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 0%));
+}
+
+/* single-slide hero (no pagination): source copy padding-bottom 32px/80px + 24px empty buttons row */
+.carousel-hero-video:not(:has(> .carousel-hero-video-pagination)) .carousel-hero-video-slide-content {
+  padding-bottom: 56px;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-content > :last-child {
+  margin-bottom: 0;
+}
+
+.carousel-hero-video h1,
+.carousel-hero-video h2 {
+  max-width: 960px;
+  margin: 0;
+  color: var(--neom-white);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 400;
+  line-height: 1.19;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* heading tiers: source .a-heading.-h4 / .a-heading.-h5 (fluid type tokens) */
+.carousel-hero-video.large-title,
+.carousel-hero-video.small-title {
+  --carousel-hero-video-title-size: clamp(28px, calc(17px + 2.2917vw), 50px);
+}
+
+.carousel-hero-video.small-title {
+  --carousel-hero-video-title-size: clamp(28px, calc(23.5px + 0.9375vw), 37px);
+}
+
+.carousel-hero-video.large-title :is(h1, h2),
+.carousel-hero-video.small-title :is(h1, h2) {
+  font-size: var(--carousel-hero-video-title-size);
+  line-height: 1.43;
+  letter-spacing: calc(var(--carousel-hero-video-title-size) * 0.09 + 0.0031vw - 0.015px);
+}
+
+.carousel-hero-video .carousel-hero-video-slide-content p {
+  margin: 0;
+  color: var(--neom-white);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* inline-subtitle option: source sub-line sits inside the heading at 50% size,
+   inheriting the heading weight and letter-spacing */
+.carousel-hero-video.inline-subtitle .carousel-hero-video-slide-content > :is(h1, h2) + p {
+  margin-top: 14px;
+  font-size: calc(var(--carousel-hero-video-title-size, var(--heading-font-size-xxl)) * 0.5);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: calc(var(--carousel-hero-video-title-size, var(--heading-font-size-xxl)) * 0.09 + 0.0031vw - 0.015px);
+}
+
+/* 20px between eyebrow / heading / description (source copyDescription margin-top) */
+.carousel-hero-video .carousel-hero-video-slide-content > * + :is(h1, h2, p) {
+  margin-top: 20px;
+}
+
+.carousel-hero-video .carousel-hero-video-slide-content > .button-container {
+  align-self: stretch;
+  margin: 24px 0 0;
+}
+
+/* CTA pill: source .m-button -white -large */
+main .carousel-hero-video a.button:any-link {
+  box-sizing: border-box;
+  display: inline-flex;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--neom-black-10);
+  border-radius: var(--button-radius);
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.08px;
+}
+
+main .carousel-hero-video a.button:hover,
+main .carousel-hero-video a.button:focus-visible {
+  background-color: var(--neom-cream);
+  color: var(--neom-black);
+}
+
+/* video CTA: source .m-button -transparent -play */
+main .carousel-hero-video a.button.play:any-link {
+  gap: 0;
+  padding: 0 20px 0 40px;
+  border-color: rgb(255 255 255 / 20%);
+  background-color: transparent;
+  color: var(--neom-white);
+}
+
+main .carousel-hero-video a.button.play:hover,
+main .carousel-hero-video a.button.play:focus-visible {
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+main .carousel-hero-video a.button.play::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-left: 13.33px;
+  background-color: currentcolor;
+  mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M7.7 19a.7.7 0 01-.3-.1.8.8 0 01-.4-.7V5.8a.8.8 0 01.4-.7.7.7 0 01.7 0l10.2 6.2a.8.8 0 01.4.7.8.8 0 01-.4.7L8.1 18.9a.7.7 0 01-.4.1z"/%3E%3C/svg%3E') center / contain no-repeat;
+}
+
+/* timed pagination bars */
+.carousel-hero-video .carousel-hero-video-pagination {
+  position: absolute;
+  z-index: 3;
+  left: 20px;
+  right: 20px;
+  bottom: 19px;
+}
+
+.carousel-hero-video .carousel-hero-video-indicators {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-hero-video .carousel-hero-video-indicator {
+  flex: 1 1 0;
+}
+
+/* bar sits on top of the hit area; source __title adds 16px/20px padding below it */
+.carousel-hero-video .carousel-hero-video-indicator button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* track */
+.carousel-hero-video .carousel-hero-video-indicator button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background-color: rgb(255 255 255 / 50%);
+}
+
+/* fill */
+.carousel-hero-video .carousel-hero-video-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--neom-white);
+}
+
+.carousel-hero-video .carousel-hero-video-indicator.done .carousel-hero-video-progress {
+  width: 100%;
+}
+
+.carousel-hero-video .carousel-hero-video-indicator.active .carousel-hero-video-progress {
+  animation: carousel-hero-video-progress var(--carousel-hero-video-duration, 8000ms) linear forwards;
+}
+
+.carousel-hero-video.paused .carousel-hero-video-indicator.active .carousel-hero-video-progress {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-hero-video-progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* classic option: source V1 .b-heroSlider (o-heroContent, -solidMask, page-indicator dots) */
+.carousel-hero-video.classic .carousel-hero-video-slide-media::after {
+  opacity: 0.2;
+  background: rgb(0 0 0);
+}
+
+/* 75px container padding + 30px empty buttons row */
+.carousel-hero-video.classic .carousel-hero-video-slide-content {
+  padding: calc(100vw / 18) calc(100vw / 18) 105px;
+  background-image: none;
+}
+
+.carousel-hero-video.classic .carousel-hero-video-slide-content > .button-container {
+  margin-top: 30px;
+}
+
+.carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+  margin-top: 1em;
+  font-size: 21px;
+  font-weight: 100;
+  line-height: clamp(135%, calc(135% + 0.7292vw - 3.5px), 142%);
+}
+
+.carousel-hero-video.classic .carousel-hero-video-pagination {
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  padding: 20px 0;
+}
+
+.carousel-hero-video.classic .carousel-hero-video-indicators {
+  justify-content: center;
+  gap: 0;
+}
+
+.carousel-hero-video.classic .carousel-hero-video-indicator {
+  flex: 0 0 auto;
+}
+
+.carousel-hero-video.classic .carousel-hero-video-indicator button {
+  width: 6px;
+  height: 6px;
+  margin: 1px 10px;
+  border-radius: 6px;
+  background-color: rgb(255 255 255 / 20%);
+}
+
+.carousel-hero-video.classic .carousel-hero-video-indicator.active button {
+  background-color: var(--neom-gold);
+  cursor: default;
+}
+
+/* dots have no track or timed fill */
+.carousel-hero-video.classic .carousel-hero-video-indicator button::before,
+.carousel-hero-video.classic .carousel-hero-video-indicator button > span {
+  display: none;
+}
+
+/* full-video modal */
+.carousel-hero-video .carousel-hero-video-modal {
+  box-sizing: border-box;
+  width: min(90vw, 1280px);
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: var(--neom-black);
+  overflow: visible;
+}
+
+.carousel-hero-video .carousel-hero-video-modal::backdrop {
+  background-color: rgb(0 0 0 / 80%);
+}
+
+.carousel-hero-video .carousel-hero-video-modal-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-hero-video .carousel-hero-video-modal-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-hero-video .carousel-hero-video-modal-close::before,
+.carousel-hero-video .carousel-hero-video-modal-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: var(--neom-white);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel-hero-video .carousel-hero-video-modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-hero-video .carousel-hero-video-slide,
+  .carousel-hero-video .carousel-hero-video-slide.active {
+    transition: none;
+  }
+
+  .carousel-hero-video .carousel-hero-video-indicator.active .carousel-hero-video-progress {
+    animation: none;
+    width: 100%;
+  }
+}
+
+/* source .a-moustache.-large font-size steps */
+@media (width >= 480px) {
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 10px;
+  }
+}
+
+@media (width >= 768px) {
+  .carousel-hero-video.short .carousel-hero-video-slide {
+    min-height: min(100dvh, 723px);
+  }
+
+  .carousel-hero-video.classic .carousel-hero-video-slide-content {
+    padding: min(70px, calc(100vw * 7 / 144)) min(70px, calc(100vw * 7 / 144)) 105px;
+  }
+
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 12px;
+  }
+
+  .carousel-hero-video.classic .carousel-hero-video-indicator button {
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+  }
+}
+
+@media (width >= 1024px) {
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 1025px) {
+  .carousel-hero-video.short .carousel-hero-video-slide {
+    min-height: min(100dvh, 740px);
+  }
+}
+
+@media (width >= 1240px) {
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 14px;
+  }
+}
+
+@media (width >= 1440px) {
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1600px) {
+  .carousel-hero-video.classic .carousel-hero-video-slide-content > :is(h1, h2) + p {
+    font-size: 26px;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-hero-video .carousel-hero-video-slide-content {
+    padding: 80px 80px 181px;
+  }
+
+  .carousel-hero-video:not(:has(> .carousel-hero-video-pagination)) .carousel-hero-video-slide-content {
+    padding-bottom: 104px;
+  }
+
+  .carousel-hero-video .carousel-hero-video-slide-content p {
+    font-size: 24px;
+  }
+
+  .carousel-hero-video .carousel-hero-video-slide-content > .button-container {
+    align-self: auto;
+  }
+
+  main .carousel-hero-video a.button:any-link {
+    width: auto;
+    min-height: 56px;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: var(--label-letter-spacing);
+  }
+
+  main .carousel-hero-video a.button.play:any-link {
+    padding: 0 32px;
+  }
+
+  main .carousel-hero-video a.button.play::after {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+  }
+
+  .carousel-hero-video .carousel-hero-video-pagination {
+    left: 80px;
+    right: 80px;
+    bottom: 80px;
+  }
+
+  .carousel-hero-video .carousel-hero-video-indicators {
+    gap: 32px;
+  }
+
+  .carousel-hero-video .carousel-hero-video-indicator button {
+    height: 40px;
+  }
+}

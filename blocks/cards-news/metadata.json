@@ -1,0 +1,44 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "News listing with the first article featured large and the rest in a row of smaller cards",
+    "notes": [
+      "Cream background; uppercase h2 \"Latest News\" with sub-line, outline pill \"Explore more\" button right; first article featured large (image left, big uppercase title, excerpt, date), remaining 3 in a row of smaller cards (image, ARTICLE label, title, date).",
+      "slider option (Related Articles on newsroom articles, white section): all cards equal width, image + label + title + date, in a horizontal scroll-snap track with round prev/next arrow buttons; no featured card."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per article: cell 1 = image, cell 2 = type label paragraph (e.g. Article) + title heading with link + optional excerpt + date paragraph",
+    "patterns": [
+      "first card featured large (image left, excerpt)",
+      "remaining cards in a row: image, type label, title, date",
+      "slider option: no featured card; equal-width cards in a horizontal scroll-snap track with prev/next buttons"
+    ],
+    "blockContent": [
+      "4 news article cards linking to newsroom detail pages: image, type label \"Article\", title, optional excerpt, date; first one featured",
+      "Related articles from cmp-c123-featured-news without -highlightedNews (slider option)"
+    ]
+  },
+  "options": [
+    {
+      "class": "slider",
+      "label": "Slider: equal-size cards in a horizontal scroller with prev/next arrows, no featured first card (Related Articles)"
+    }
+  ],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Latest news teasers on landing pages.",
+    "pagesUsing": [
+      "/en-us",
+      "/en-us/newsroom",
+      "/en-us/newsroom/neom-green-hydrogen"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for article teasers where the first is featured. Use the slider option for a row of related articles that scrolls horizontally. Use cards for equal-weight cards."
+}

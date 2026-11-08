@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/newsroom",
+  "path": "en-us/newsroom",
+  "timestamp": "2026-11-07T19:30:58.833Z",
+  "title": "News & Media Center",
+  "template": "newsroom",
+  "blocks": [
+    "cards-news"
+  ]
+}

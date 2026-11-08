@@ -1,0 +1,345 @@
+/*
+ * columns-share: values from neom.com .-c44redesigned .b-articleContent__share-list
+ * (default bar) and .b-articleContent__buttons + .o-popupMessage/.o-shareList (modal).
+ */
+
+/* ---------- default: share bar ---------- */
+
+/* the source's 40px bottom margin collapses out of the article section; section padding covers it */
+.columns-share:not(.modal) {
+  margin: 12px 0 0;
+}
+
+.columns-share .columns-share-bar {
+  display: block;
+  border-radius: 8px;
+  background-color: rgb(228 224 215);
+  color: var(--neom-black);
+}
+
+.columns-share .columns-share-bar .columns-share-label {
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.columns-share .columns-share-bar .columns-share-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 8px;
+  margin: 0;
+  padding: 12px 8px 8px;
+  list-style: none;
+}
+
+.columns-share .columns-share-bar .columns-share-list > li {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.columns-share .columns-share-bar .columns-share-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(29 25 23);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.columns-share .columns-share-icon,
+.columns-share .columns-share-icon svg {
+  display: block;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.columns-share .columns-share-link-text,
+.columns-share .columns-share-status,
+.columns-share-offscreen {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.columns-share .columns-share-copied-msg {
+  display: none;
+}
+
+/* visible confirmation on the bar while "Link copied" is announced */
+.columns-share .columns-share-bar .columns-share-copied {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+@media (width >= 900px) {
+  .columns-share .columns-share-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0 24px;
+    border-radius: 16px;
+  }
+
+  .columns-share .columns-share-bar .columns-share-label {
+    margin: 28px 0;
+    font-size: 16px;
+  }
+
+  .columns-share .columns-share-bar .columns-share-list {
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+}
+
+/* ---------- modal option: Back + Share pills, links in a dialog ---------- */
+
+.columns-share.modal {
+  padding: 40px 0;
+}
+
+.columns-share.modal .columns-share-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+main .columns-share.modal .columns-share-back:any-link,
+.columns-share.modal .columns-share-toggle {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10.6667px;
+  width: 100%;
+  max-width: 480px;
+  height: var(--button-height);
+  margin: 0;
+  padding: 0 14px 0 28px;
+  border: 1px solid rgb(29 31 34 / 20%);
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: var(--neom-black);
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: var(--label-letter-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--button-transition), color var(--button-transition), border-color var(--button-transition);
+}
+
+main .columns-share.modal .columns-share-back:any-link {
+  padding: 0 28px 0 14px;
+}
+
+main .columns-share.modal .columns-share-back:hover,
+.columns-share.modal .columns-share-toggle:hover {
+  border-color: transparent;
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+.columns-share.modal .columns-share-actions .columns-share-icon,
+.columns-share.modal .columns-share-actions .columns-share-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* dialog: padding sits on the body so a click on the dialog element is the backdrop */
+.columns-share.modal .columns-share-dialog {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 580px;
+  max-height: 80vh;
+  margin: 100px auto auto;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--neom-cream-light);
+  color: var(--neom-black);
+  overflow: auto;
+}
+
+.columns-share.modal .columns-share-dialog::backdrop {
+  background: rgb(0 0 0 / 90%);
+}
+
+.columns-share.modal .columns-share-dialog-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.columns-share.modal .columns-share-dialog-title {
+  margin: 0 0 25px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+.columns-share.modal .columns-share-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main .columns-share.modal .columns-share-link:any-link,
+.columns-share.modal .columns-share-list button.columns-share-link {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--neom-beige);
+  color: var(--neom-black);
+  text-align: start;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.columns-share.modal .columns-share-link .columns-share-icon {
+  color: var(--neom-gold);
+  transition: color 0.25s;
+}
+
+main .columns-share.modal .columns-share-link:hover,
+.columns-share.modal .columns-share-list button.columns-share-link:hover {
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+.columns-share.modal .columns-share-link .columns-share-link-text {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 20px;
+  overflow: visible;
+  clip-path: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+}
+
+/* copy link: green "Copied" panel slides in (source .m-shareButton__success) */
+.columns-share.modal .columns-share-copied-msg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(0 107 68);
+  color: var(--neom-white);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.columns-share.modal .columns-share-copied-msg .columns-share-icon {
+  color: var(--neom-gold);
+}
+
+.columns-share.modal .columns-share-link:hover > .columns-share-icon {
+  color: var(--neom-white);
+}
+
+.columns-share.modal .columns-share-copied .columns-share-copied-msg {
+  opacity: 1;
+  transform: none;
+}
+
+/* close: round outlined button pinned to the viewport (bottom-centre on mobile) */
+.columns-share.modal .columns-share-close {
+  position: fixed;
+  right: 0;
+  bottom: 28px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 60px;
+  background: transparent;
+  color: var(--neom-white);
+  cursor: pointer;
+  transition: background-color var(--button-transition), border-color var(--button-transition);
+}
+
+.columns-share.modal .columns-share-close:hover {
+  border-color: transparent;
+  background-color: var(--neom-gold-light);
+}
+
+@media (width >= 900px) {
+  .columns-share.modal .columns-share-actions {
+    flex-flow: row wrap;
+  }
+
+  main .columns-share.modal .columns-share-back:any-link,
+  .columns-share.modal .columns-share-toggle {
+    width: auto;
+  }
+
+  .columns-share.modal .columns-share-dialog {
+    width: 100%;
+    margin: auto;
+  }
+
+  .columns-share.modal .columns-share-dialog-body {
+    padding: 40px;
+  }
+
+  .columns-share.modal .columns-share-dialog-title {
+    margin-bottom: 35px;
+    font-size: 28px;
+    line-height: 1.43;
+  }
+
+  .columns-share.modal .columns-share-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .columns-share.modal .columns-share-close {
+    inset: 20px 20px auto auto;
+    margin: 0;
+  }
+}

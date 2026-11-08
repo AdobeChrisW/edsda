@@ -1,0 +1,222 @@
+/* NEOM newsletter signup (source .cmp-c96-newsletter-subscription):
+ * cream pill input with the dark "Sign up" pill inset at its end.
+ * Same look on dark and light sections. */
+.form {
+  --form-input-height: 42px;
+  --form-button-height: 33px;
+  --form-button-inset: 6px;
+}
+
+.form .form-newsletter {
+  position: relative;
+  max-width: 100%;
+  margin: 16px 0 0;
+}
+
+.form .form-field {
+  min-width: 0;
+}
+
+/* visually hidden label, kept for screen readers (source label is hidden) */
+.form .form-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form .form-field input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--form-input-height);
+  margin: 0;
+  padding: 0;
+  padding-inline: 15px 120px;
+  border: 1px solid #e8e9e9;
+  border-radius: 30px;
+  outline: none;
+  background-color: var(--neom-cream-light);
+  color: var(--neom-black);
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 40px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form .form-field input::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.form .form-field input:not(:placeholder-shown) {
+  border-color: rgb(29 31 34 / 30%);
+}
+
+.form .form-field input:focus,
+.form .form-field input:focus-visible {
+  box-shadow: 0 0 0 4px #e2e0da;
+}
+
+.form .form-field input[aria-invalid='true'] {
+  border-color: #e0403f;
+}
+
+/* source .m-button -primary -black, positioned inside the input */
+.form .form-submit {
+  position: absolute;
+  top: calc((var(--form-input-height) - var(--form-button-height)) / 2);
+  inset-inline-end: var(--form-button-inset);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--form-button-height);
+  margin: 0;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+  font-family: var(--body-font-family);
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.form .form-submit:hover,
+.form .form-submit:focus-visible {
+  border-color: transparent;
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+/* source disables the button (0.8, not-allowed, no hover) until a valid email is entered */
+.form .form-pending .form-submit {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.form .form-submit:disabled,
+.form .form-submit:disabled:hover {
+  background-color: var(--neom-black);
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form .form-pending .form-submit:hover {
+  border-color: transparent;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+/* source .a-formError */
+.form .form-message {
+  margin: 5px 25px 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.form .form-error .form-message {
+  color: #e0403f;
+  text-transform: uppercase;
+}
+
+.form .form-message:empty {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .form .form-field input {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 900px) {
+  /* form sits at the end of the split section's right column */
+  .form .form-newsletter {
+    width: 336px;
+    margin: 0;
+    margin-inline-start: auto;
+  }
+}
+
+@media (width >= 1025px) {
+  .form {
+    --form-input-height: 52px;
+    --form-button-height: 44px;
+  }
+
+  .form .form-newsletter {
+    width: 420px;
+  }
+
+  .form .form-submit {
+    padding: 0 25px;
+    font-size: 12px;
+  }
+}
+
+/* photo-background newsletter (source .m-componentBackground + .m-button -primary -black -large):
+ * graphite input with white text, white "Sign up" pill; same at every width */
+main .section.background .form {
+  --form-input-height: 57px;
+  --form-button-height: 48px;
+}
+
+main .section.background .form .form-field input {
+  padding: 8.5px 140px 8.5px 25px;
+  border: 0;
+  background-color: var(--neom-graphite);
+  color: var(--neom-white);
+  font-size: 16px;
+}
+
+main .section.background .form .form-field input::placeholder {
+  color: var(--neom-white);
+}
+
+main .section.background .form .form-field input:focus,
+main .section.background .form .form-field input:focus-visible {
+  box-shadow: 0 0 0 4px #e2e0da;
+}
+
+main .section.background .form .form-submit {
+  top: 6px;
+  padding: 0 28px;
+  border-color: var(--neom-white);
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+  font-size: 12px;
+}
+
+main .section.background .form .form-submit:hover,
+main .section.background .form .form-submit:focus-visible {
+  border-color: transparent;
+  background-color: var(--neom-gold-light);
+  color: var(--neom-white);
+}
+
+main .section.background .form .form-submit:disabled,
+main .section.background .form .form-submit:disabled:hover,
+main .section.background .form .form-pending .form-submit:hover {
+  border-color: var(--neom-white);
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+}
+
+@media (width >= 900px) {
+  /* source keeps the 420px form at the start of the photo band */
+  main .section.background .form .form-newsletter {
+    width: 420px;
+    margin-inline-start: 0;
+  }
+}

@@ -1,0 +1,480 @@
+/* cards-people: source .cmp-c70-card-grid (neom.com/en-us/about/leadership) */
+
+.cards-people {
+  display: flex;
+  flex-direction: column;
+
+  /* search field to grid: filter container padding + empty selected-filter row (30px + 30px) */
+  gap: calc(clamp(20px, 4.8611vw, 70px) + 60px);
+  color: var(--text-color);
+}
+
+/* search field (source .m-searchField) */
+.cards-people .cards-people-search {
+  position: relative;
+  height: 60px;
+  margin: 0;
+}
+
+.cards-people .cards-people-search-label,
+.cards-people .cards-people-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cards-people .cards-people-search input {
+  appearance: none;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 8.5px 25% 8.5px 6%;
+  border: 1px solid #e8e9e9;
+  border-radius: 4px;
+  background-color: var(--neom-white);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 40px;
+  text-transform: none;
+}
+
+.cards-people .cards-people-search input:focus {
+  border-color: rgb(29 31 34 / 30%);
+  outline: none;
+  box-shadow: 0 0 0 4px #e2e0da;
+}
+
+.cards-people .cards-people-search input:focus-visible {
+  outline: none;
+}
+
+.cards-people .cards-people-search::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--neom-gold);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m19.707 18.293-3.681-3.682a9.023 9.023 0 1 0-1.414 1.414l3.681 3.682a1 1 0 0 0 1.414-1.414ZM2 9a7 7 0 1 1 11.964 4.928c-.006.006-.014.008-.021.014s-.008.015-.014.022A7 7 0 0 1 2 9Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  transform: translateY(-75%);
+  pointer-events: none;
+}
+
+/* grid (source .b-cardGrid__items) */
+.cards-people .cards-people-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* card (source .m-personCard) */
+.cards-people .cards-people-card {
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cards-people .cards-people-card[hidden] {
+  display: none;
+}
+
+.cards-people .cards-people-card-image p {
+  margin: 0;
+}
+
+.cards-people .cards-people-card-image picture,
+.cards-people .cards-people-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.cards-people .cards-people-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cards-people .cards-people-name {
+  margin: 15px 0 5px;
+  color: var(--text-color);
+  font-size: clamp(21px, calc(17.5px + 0.7292vw), 28px);
+  font-weight: 100;
+  line-height: clamp(135%, calc(135% + 0.8333vw - 4px), 143%);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cards-people .cards-people-role {
+  margin: 0 0 8px;
+  color: var(--neom-gold);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* gold arrow pinned to the card bottom (source .m-personCard__icon) */
+.cards-people .cards-people-card-body::after,
+.cards-people .cards-people-link a::after {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--neom-gold);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M22.5 12.4a.5.5 0 000-.8l-5.8-5a.5.5 0 00-.7.7l2.6 4H2.1a.8.8 0 000 1.4h16.5l-2.6 4a.5.5 0 00.7.7l5.8-5z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cards-people .cards-people-card-body::after {
+  margin-top: auto;
+}
+
+/* an authored bio link carries the arrow itself */
+.cards-people .cards-people-card-body:has(.cards-people-link)::after {
+  content: none;
+}
+
+.cards-people .cards-people-link {
+  margin: auto 0 0;
+}
+
+.cards-people .cards-people-link a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neom-gold);
+  text-decoration: none;
+}
+
+/* hover: the other cards fade out (source .b-cardGrid__item.-isDisabled) */
+@media (hover: hover) {
+  .cards-people .cards-people-list:has(.cards-people-card:hover) .cards-people-card:not(:hover) {
+    opacity: 0.25;
+  }
+}
+
+@media (width >= 768px) {
+  /* source container insets the grid by 12.5% of the viewport on each side */
+  .cards-people {
+    max-width: 75vw;
+    margin-inline: auto;
+  }
+
+  .cards-people .cards-people-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .cards-people .cards-people-name {
+    margin: 25px 0 10px;
+  }
+}
+
+@media (width >= 1024px) {
+  .cards-people {
+    gap: 60px;
+  }
+
+  .cards-people .cards-people-search {
+    width: 310px;
+  }
+
+  .cards-people .cards-people-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 75px;
+  }
+}
+
+@media (width >= 1240px) {
+  .cards-people .cards-people-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+  }
+}
+
+/* ---------- bio side panel (source .o-modal -fullBleedCarousel / .o-modalBioContent) ---------- */
+
+/* the whole card is the control: a transparent button stretched over it */
+.cards-people .cards-people-card-has-bio {
+  position: relative;
+  cursor: pointer;
+}
+
+.cards-people .cards-people-open {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cards-people .cards-people-open:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+/* an authored bio link stays clickable above the card button */
+.cards-people .cards-people-card-has-bio .cards-people-link {
+  position: relative;
+  z-index: 2;
+}
+
+.cards-people .cards-people-card-bio[hidden] {
+  display: none;
+}
+
+/* lock page scroll while the panel is open (source sets overflow: hidden on html/body) */
+html:has(.cards-people-dialog[open]) {
+  overflow: hidden;
+}
+
+/* panel: 560px drawer on the right, cream, full height */
+.cards-people .cards-people-dialog {
+  position: fixed;
+  inset: 0 0 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background-color: #f5f3ea;
+  color: var(--article-text-color);
+  font-family: var(--body-font-family);
+}
+
+.cards-people .cards-people-dialog[open] {
+  animation: cards-people-panel-in 0.4s ease-out;
+}
+
+/* source .o-modal__mask */
+.cards-people .cards-people-dialog::backdrop {
+  background-color: rgb(0 0 0 / 75%);
+}
+
+.cards-people .cards-people-dialog[open]::backdrop {
+  animation: cards-people-mask-in 0.4s ease-out;
+}
+
+@keyframes cards-people-panel-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes cards-people-mask-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-people .cards-people-dialog[open],
+  .cards-people .cards-people-dialog[open]::backdrop {
+    animation: none;
+  }
+}
+
+.cards-people .cards-people-dialog-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards-people .cards-people-dialog-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  /* source .o-modalBioContent padding: 14.58px at 375px, 49px at 1440px */
+  padding: clamp(14.58px, 3.4028vw, 49px);
+}
+
+/* source .o-modalBioContent__image: square portrait, full content width */
+.cards-people .cards-people-dialog-image picture,
+.cards-people .cards-people-dialog-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* source .o-modalBioContent__basicInfo */
+.cards-people .cards-people-dialog-info {
+  margin: 45px 0;
+}
+
+.cards-people .cards-people-dialog-name {
+  margin: 0 0 8px;
+  color: var(--neom-black);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cards-people .cards-people-dialog-role {
+  margin: 0 0 8px;
+  color: var(--neom-gold);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+}
+
+/* source .o-modalBioContent__biography.s-content.-small */
+.cards-people .cards-people-dialog-bio {
+  margin: 0 0 34px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+}
+
+.cards-people .cards-people-dialog-bio p,
+.cards-people .cards-people-dialog-bio ul,
+.cards-people .cards-people-dialog-bio ol {
+  margin: 0 0 24px;
+}
+
+.cards-people .cards-people-dialog-bio ul,
+.cards-people .cards-people-dialog-bio ol {
+  padding: 0 12px;
+}
+
+.cards-people .cards-people-dialog-bio > :last-child {
+  margin-bottom: 0;
+}
+
+/* prev / next bar (not on the source panel; label style from the source breadcrumbs) */
+.cards-people .cards-people-dialog-nav {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px clamp(14.58px, 3.4028vw, 49px);
+  border-top: 1px solid var(--neom-black-10);
+}
+
+.cards-people .cards-people-dialog-nav[hidden] {
+  display: none;
+}
+
+.cards-people .cards-people-dialog-prev,
+.cards-people .cards-people-dialog-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--neom-gold);
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cards-people .cards-people-dialog-prev::before,
+.cards-people .cards-people-dialog-next::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.7.6c-.2.2-.3.5-.1.7L8.1 8l-4.5 6.7c-.1.2-.1.5.1.7.2.2.5.2.7 0l8-7c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4l-8-7C4.1.5 3.9.5 3.7.6z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.cards-people .cards-people-dialog-prev::before {
+  transform: scaleX(-1);
+}
+
+.cards-people .cards-people-dialog-prev:hover,
+.cards-people .cards-people-dialog-next:hover {
+  color: var(--neom-black);
+}
+
+.cards-people .cards-people-dialog-counter {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.24px;
+}
+
+/* close: 60px circle (source .m-button -secondary -white -large -close -iconOnly);
+   mobile: white disc with a dark X, top-right 20px inside the panel */
+.cards-people .cards-people-dialog-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 50%;
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+  cursor: pointer;
+}
+
+.cards-people .cards-people-dialog-close::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4l5.6 5.6L5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+@media (width >= 768px) {
+  .cards-people .cards-people-dialog {
+    width: 560px;
+  }
+
+  /* desktop: transparent white-outline circle on the mask, 40px left of the panel */
+  .cards-people .cards-people-dialog-close {
+    top: 40px;
+    right: calc(100% + 40px);
+    background-color: transparent;
+    color: var(--neom-white);
+  }
+
+  .cards-people .cards-people-dialog-close:hover {
+    background-color: rgb(255 255 255 / 10%);
+  }
+
+  .cards-people .cards-people-dialog-name {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}

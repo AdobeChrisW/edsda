@@ -1,0 +1,130 @@
+/* values from source .cmp-c112-video-gallery (b-videoGallery / o-galleryCard) */
+.cards-gallery .cards-gallery-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 50px;
+  margin: 0;
+  padding: 50px 0;
+  list-style: none;
+}
+
+.cards-gallery .cards-gallery-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-gallery .cards-gallery-image p {
+  margin: 0;
+}
+
+.cards-gallery .cards-gallery-open {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.cards-gallery .cards-gallery-image picture,
+.cards-gallery .cards-gallery-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.cards-gallery .cards-gallery-caption {
+  margin: 23px 0 10px;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+.cards-gallery .cards-gallery-caption p {
+  margin: 0;
+}
+
+/* lightbox (dialog appended to body inside a .cards-gallery host) */
+.cards-gallery.cards-gallery-lightbox-host {
+  display: contents;
+}
+
+.cards-gallery .cards-gallery-lightbox {
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.cards-gallery .cards-gallery-lightbox::backdrop {
+  background-color: rgb(0 0 0 / 85%);
+}
+
+.cards-gallery .cards-gallery-figure {
+  margin: 0;
+  color: #fff;
+}
+
+.cards-gallery .cards-gallery-figure img {
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+}
+
+.cards-gallery .cards-gallery-figure figcaption {
+  padding-top: 12px;
+}
+
+.cards-gallery .cards-gallery-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cards-gallery .cards-gallery-close::before,
+.cards-gallery .cards-gallery-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  background-color: currentcolor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cards-gallery .cards-gallery-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (width >= 900px) {
+  .cards-gallery .cards-gallery-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px 80px;
+  }
+
+  .cards-gallery .cards-gallery-caption {
+    font-size: 21px;
+    line-height: 25.2px;
+    letter-spacing: 1.92px;
+  }
+}

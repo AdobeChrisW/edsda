@@ -1,0 +1,320 @@
+/*
+ * cards-flip: source .cmp-c117-flip-cards (b-flipCards, -noImageOverlay)
+ * Mobile base: 1 column, 2:1 cards. The source switches to 3 square columns at 1024px,
+ * so the desktop layout uses that breakpoint instead of 900px.
+ */
+
+/* source container: max-width 1780px, inline padding clamp(20px, 4.8611vw, 70px) */
+main > .section > .cards-flip-wrapper {
+  max-width: 1780px;
+  padding: 0 clamp(20px, 4.8611vw, 70px);
+}
+
+/* source header margin-block-end between the group heading and the cards */
+main > .section > .default-content-wrapper + .cards-flip-wrapper {
+  margin-top: 4.4642vh;
+}
+
+.cards-flip {
+  color: var(--neom-black);
+}
+
+.cards-flip .cards-flip-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-flip .cards-flip-card {
+  position: relative;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cards-flip .cards-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-flip .cards-flip-front,
+.cards-flip .cards-flip-back {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+}
+
+/* front: photo with the name at the bottom */
+.cards-flip .cards-flip-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  overflow: hidden;
+  color: var(--neom-white);
+  isolation: isolate;
+}
+
+.cards-flip .cards-flip-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.cards-flip .cards-flip-image p {
+  margin: 0;
+}
+
+.cards-flip .cards-flip-image picture,
+.cards-flip .cards-flip-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* the source swaps in a wide mobile crop; top-aligning the square photo keeps the head in view */
+  object-position: center top;
+}
+
+/* 4px white bar that wipes in on hover */
+.cards-flip .cards-flip-front::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--neom-white);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* name type: source body-xlarge, 21px (390) to 37px (1440) */
+.cards-flip .cards-flip-name,
+.cards-flip .cards-flip-title {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: clamp(21px, calc(13px + 1.6667vw), 37px);
+  font-weight: 100;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* mobile: name and button share one row (space-between, centred) */
+.cards-flip .cards-flip-name {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding-right: 40px;
+}
+
+/* back: name and bio on white */
+.cards-flip .cards-flip-back {
+  z-index: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--neom-white);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.1);
+  transform-origin: left bottom;
+
+  /* closing: shrink toward the bottom-left corner while fading */
+  transition:
+    opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    visibility 0s linear 0.7s;
+}
+
+.cards-flip .cards-flip-card.flipped .cards-flip-back {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: none;
+  animation: cards-flip-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* opening: slide up 100px while fading in */
+@keyframes cards-flip-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* the front name and hover bar hide at once when the card opens */
+.cards-flip .cards-flip-card.flipped .cards-flip-name,
+.cards-flip .cards-flip-card.flipped .cards-flip-front::after {
+  visibility: hidden;
+}
+
+.cards-flip .cards-flip-back .cards-flip-title {
+  color: var(--neom-black);
+}
+
+/* mobile bio: body-xsmall, clear of the button column (40px + 5px gap) */
+.cards-flip .cards-flip-back p {
+  margin: 0;
+  padding-right: 45px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 100;
+  line-height: 18px;
+  letter-spacing: 0.24px;
+  color: var(--neom-black);
+}
+
+/* +/- button: source .m-button -small -iconOnly */
+.cards-flip .cards-flip-toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 60px;
+  background-color: transparent;
+  color: var(--neom-white);
+  cursor: pointer;
+  transition:
+    background-color var(--button-transition),
+    color var(--button-transition);
+}
+
+.cards-flip .cards-flip-toggle::before,
+.cards-flip .cards-flip-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 1.8px;
+  background-color: currentcolor;
+  transform: translate(-50%, -50%);
+}
+
+.cards-flip .cards-flip-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* open card: dark round button with a minus */
+.cards-flip .cards-flip-card.flipped .cards-flip-toggle {
+  border-color: transparent;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+}
+
+/* card hover: white button with a dark plus */
+.cards-flip .cards-flip-card:not(.flipped):hover .cards-flip-toggle {
+  background-color: var(--neom-white);
+  color: var(--neom-black);
+}
+
+.cards-flip .cards-flip-card.flipped .cards-flip-toggle:hover {
+  background-color: var(--neom-gold-light);
+}
+
+.cards-flip .cards-flip-card.flipped .cards-flip-toggle::after {
+  transform: translate(-50%, -50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cards-flip .cards-flip-front::after {
+    transition: transform 0.25s linear;
+  }
+
+  .cards-flip .cards-flip-card:not(.flipped):hover .cards-flip-front::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cards-flip .cards-flip-back,
+  .cards-flip .cards-flip-toggle {
+    transition: none;
+  }
+
+  .cards-flip .cards-flip-card.flipped .cards-flip-back {
+    animation: none;
+  }
+}
+
+@media (width >= 480px) {
+  main > .section > .default-content-wrapper + .cards-flip-wrapper {
+    margin-top: 7vh;
+  }
+}
+
+@media (width >= 768px) {
+  main > .section > .default-content-wrapper + .cards-flip-wrapper {
+    margin-top: 9vh;
+  }
+}
+
+@media (width >= 1024px) {
+  main > .section > .default-content-wrapper + .cards-flip-wrapper {
+    margin-top: 10.348vh;
+  }
+
+  .cards-flip .cards-flip-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-flip .cards-flip-card {
+    aspect-ratio: 1;
+  }
+
+  /* desktop: name above the button (40px button + 20px gap) */
+  .cards-flip .cards-flip-front {
+    padding: 40px 40px 100px;
+  }
+
+  .cards-flip .cards-flip-name {
+    display: block;
+    min-height: 0;
+    padding-right: 0;
+  }
+
+  /* desktop: name and bio stacked, button pinned bottom-left */
+  .cards-flip .cards-flip-back {
+    padding: 40px 40px 80px;
+  }
+
+  .cards-flip .cards-flip-back p {
+    padding-right: 0;
+    font-size: var(--body-font-size-m);
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+
+  .cards-flip .cards-flip-toggle {
+    right: auto;
+    left: 40px;
+    bottom: 40px;
+  }
+}
+
+@media (width >= 1240px) {
+  main > .section > .default-content-wrapper + .cards-flip-wrapper {
+    margin-top: 11.946vh;
+  }
+}
+
+@media (width >= 1600px) {
+  main > .section > .default-content-wrapper + .cards-flip-wrapper {
+    margin-top: 12.946vh;
+  }
+}

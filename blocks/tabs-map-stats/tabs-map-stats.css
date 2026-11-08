@@ -1,0 +1,398 @@
+/*
+ * tabs-map-stats: "THIS IS NEOM" region explorer
+ * (source .cmp-c95-transition-slider, computed styles at 1440x900 and 390x844)
+ */
+
+/* section that hosts the block: dark panel, heading sits above the map */
+main > .section.tabs-map-stats-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--neom-graphite);
+  color: var(--neom-white);
+}
+
+main > .section.tabs-map-stats-container > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main > .section.tabs-map-stats-container > .default-content-wrapper {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+main > .section.tabs-map-stats-container > .default-content-wrapper h2 {
+  margin: 0;
+  color: var(--neom-white);
+  font-size: 21px;
+  line-height: 1.43;
+}
+
+.tabs-map-stats {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+  color: var(--neom-white);
+}
+
+.tabs-map-stats p {
+  margin: 0;
+}
+
+.tabs-map-stats .tabs-map-stats-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.tabs-map-stats .tabs-map-stats-background picture,
+.tabs-map-stats .tabs-map-stats-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tabs-map-stats .tabs-map-stats-nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* tabs */
+.tabs-map-stats .tabs-map-stats-list {
+  display: flex;
+  overflow-x: auto;
+}
+
+.tabs-map-stats .tabs-map-stats-tab {
+  position: relative;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 22px 6px 34px;
+  border: 0;
+  border-top: 2px solid rgb(255 255 255 / 30%);
+  border-radius: 0;
+  background: transparent;
+  color: var(--neom-white);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.39px;
+  letter-spacing: 1.47px;
+  text-align: start;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.tabs-map-stats .tabs-map-stats-tab::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--neom-gold-light);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tabs-map-stats .tabs-map-stats-tab:hover,
+.tabs-map-stats .tabs-map-stats-tab[aria-selected='true'] {
+  color: var(--neom-gold-light);
+}
+
+.tabs-map-stats .tabs-map-stats-tab[aria-selected='true'] {
+  cursor: default;
+}
+
+.tabs-map-stats .tabs-map-stats-tab[aria-selected='true']::after {
+  transform: scaleX(1);
+}
+
+/* panels */
+.tabs-map-stats .tabs-map-stats-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-map-stats .tabs-map-stats-panel {
+  display: grid;
+  gap: 24px;
+}
+
+/* map: a viewport that crops a canvas kept at the image ratio (object-fit: cover),
+   so hotspot percentages stay locked to the image */
+.tabs-map-stats .tabs-map-stats-map {
+  position: relative;
+  aspect-ratio: 1;
+  margin: 0 -20px;
+  overflow: hidden;
+}
+
+/* 2px overscan hides the light edge rows of the map raster */
+.tabs-map-stats .tabs-map-stats-map-canvas {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  height: calc(100% + 4px);
+  aspect-ratio: 1700 / 797;
+  transform: translateX(-50%);
+}
+
+.tabs-map-stats .tabs-map-stats-map-image,
+.tabs-map-stats .tabs-map-stats-map-image picture,
+.tabs-map-stats .tabs-map-stats-map-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tabs-map-stats .tabs-map-stats-map-image img {
+  object-fit: cover;
+}
+
+/* hotspots */
+.tabs-map-stats .tabs-map-stats-hotspots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs-map-stats .tabs-map-stats-hotspots-placed {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.tabs-map-stats .tabs-map-stats-hotspot {
+  position: relative;
+  box-sizing: border-box;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+}
+
+.tabs-map-stats .tabs-map-stats-hotspots-placed .tabs-map-stats-hotspot {
+  position: absolute;
+  top: var(--hotspot-y);
+  left: var(--hotspot-x);
+  transform: translate(-50%, -50%);
+}
+
+.tabs-map-stats .tabs-map-stats-hotspot-link {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  color: var(--neom-white);
+  text-decoration: none;
+}
+
+.tabs-map-stats .tabs-map-stats-hotspot-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--neom-gold-light);
+  box-shadow: 0 0 0 5px rgb(255 255 255 / 12.5%);
+  transform: translate(-50%, -50%);
+}
+
+.tabs-map-stats .tabs-map-stats-hotspot-label {
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  color: var(--neom-white);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  transition: color 0.3s ease-in-out;
+}
+
+.tabs-map-stats a.tabs-map-stats-hotspot-link:hover .tabs-map-stats-hotspot-label {
+  color: var(--neom-gold-light);
+}
+
+/* details: stats, copy, link */
+.tabs-map-stats .tabs-map-stats-details {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.tabs-map-stats .tabs-map-stats-stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px 20px;
+  padding-top: 28px;
+  color: #ffd02a;
+  text-align: start;
+}
+
+.tabs-map-stats .tabs-map-stats-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd02a;
+}
+
+.tabs-map-stats .tabs-map-stats-stat-value {
+  margin: 0 0 5px;
+  font-size: 21px;
+  font-weight: 100;
+  line-height: 1.43;
+}
+
+.tabs-map-stats .tabs-map-stats-stat-value strong {
+  font-weight: 100;
+}
+
+.tabs-map-stats .tabs-map-stats-stat-measure {
+  margin: 0 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.39px;
+  letter-spacing: 1.47px;
+  text-transform: uppercase;
+}
+
+.tabs-map-stats .tabs-map-stats-stat-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  letter-spacing: 1.11px;
+  text-transform: uppercase;
+}
+
+.tabs-map-stats .tabs-map-stats-details > p {
+  margin-top: 40px;
+  color: var(--neom-white);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+}
+
+.tabs-map-stats .tabs-map-stats-details > .tabs-map-stats-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  margin: 40px 0 0;
+}
+
+main .tabs-map-stats a.button:any-link,
+main .tabs-map-stats .tabs-map-stats-link a:any-link {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--neom-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 0.96px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+main .tabs-map-stats a.button:hover,
+main .tabs-map-stats .tabs-map-stats-link a:hover {
+  background: none;
+  color: var(--neom-gold-light);
+}
+
+@media (width >= 900px) {
+  main > .section.tabs-map-stats-container {
+    /* source stage: 760px below the top of the heading */
+    min-height: calc(760px + var(--section-padding));
+    box-sizing: border-box;
+  }
+
+  main > .section.tabs-map-stats-container > div {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  main > .section.tabs-map-stats-container > .default-content-wrapper {
+    text-align: start;
+  }
+
+  main > .section.tabs-map-stats-container > .default-content-wrapper h2 {
+    font-size: 28px;
+    line-height: 40.03px;
+  }
+
+  /* block, panels and panel stay unpositioned so the map is placed against the section */
+  .tabs-map-stats {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .tabs-map-stats .tabs-map-stats-nav {
+    margin-top: 70px;
+  }
+
+  .tabs-map-stats .tabs-map-stats-list {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .tabs-map-stats .tabs-map-stats-tab {
+    width: 200px;
+  }
+
+  .tabs-map-stats .tabs-map-stats-panel {
+    display: block;
+  }
+
+  .tabs-map-stats .tabs-map-stats-map {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    margin: 0;
+    aspect-ratio: auto;
+  }
+
+  /* source: 1700x797 map covers a 1440x900 stage whose top 140px sit under the header */
+  .tabs-map-stats .tabs-map-stats-map-canvas {
+    top: calc(var(--section-padding) - 140px);
+    width: max(100%, 1920px);
+    height: auto;
+  }
+
+  .tabs-map-stats .tabs-map-stats-details {
+    width: 450px;
+    margin-left: auto;
+    text-align: start;
+  }
+
+  .tabs-map-stats .tabs-map-stats-stat-value {
+    font-size: 28px;
+    line-height: 40.03px;
+  }
+
+  .tabs-map-stats .tabs-map-stats-details > .tabs-map-stats-link {
+    justify-content: flex-start;
+  }
+}

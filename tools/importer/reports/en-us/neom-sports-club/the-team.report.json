@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/neom-sports-club/the-team",
+  "path": "en-us/neom-sports-club/the-team",
+  "timestamp": "2026-11-07T18:09:28.875Z",
+  "title": "The Team",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "breadcrumbs",
+    "form",
+    "cards-flip",
+    "cards-flip",
+    "cards-flip",
+    "cards-flip",
+    "cards-flip"
+  ]
+}

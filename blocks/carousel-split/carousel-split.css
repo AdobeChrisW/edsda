@@ -1,0 +1,357 @@
+/*
+ * carousel-split: source .cmp-c58-highlight-slideshow (b-highlightSlideshow__pillars, t-light)
+ * Mobile base (<768), tablet (>=768), desktop two-column (>=900).
+ */
+
+/* source slide inline padding: 20px / 48px / 70px, items max-width 1780px */
+main > .section > .carousel-split-wrapper {
+  max-width: 1780px;
+  padding: 0 20px;
+}
+
+/* source block padding is 40px top / 41px below the bars; offset the section padding */
+.carousel-split {
+  display: flex;
+  flex-direction: column;
+  margin: calc(40px - var(--section-padding)) 0 calc(41px - var(--section-padding));
+  color: var(--neom-black);
+}
+
+.carousel-split .carousel-split-slides {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* all slides share one grid cell; only the active one is visible */
+.carousel-split .carousel-split-slide {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 28.02vh auto;
+  align-content: start;
+  align-items: start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+.carousel-split .carousel-split-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s;
+}
+
+/* copy */
+.carousel-split .carousel-split-slide-content {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.carousel-split .carousel-split-slide-content > :first-child {
+  margin-top: 0;
+}
+
+.carousel-split .carousel-split-slide-content p.carousel-split-eyebrow {
+  margin: 0 0 32px;
+  color: rgb(148 109 0);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+.carousel-split .carousel-split-slide-content h2 {
+  margin: 0 0 16px;
+  color: var(--neom-black);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+.carousel-split .carousel-split-slide-content p {
+  margin: 0 0 32px;
+  color: rgb(29 31 34 / 70%);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+/* image */
+.carousel-split .carousel-split-slide-media {
+  position: relative;
+  grid-row: 2;
+  grid-column: 1;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.carousel-split .carousel-split-slide-media p {
+  margin: 0;
+}
+
+.carousel-split .carousel-split-slide-media picture {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-split .carousel-split-slide-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CTA: source .m-button -primary -black -large */
+.carousel-split .carousel-split-slide-cta {
+  grid-row: 3;
+  grid-column: 1;
+  margin-top: 32px;
+}
+
+.carousel-split .carousel-split-slide-cta .button-container {
+  margin: 0;
+}
+
+main .carousel-split a.button:any-link {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 40px;
+  border-radius: 100px;
+  background-color: var(--neom-black);
+  color: var(--neom-white);
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.72px;
+}
+
+main .carousel-split a.button:hover,
+main .carousel-split a.button:focus-visible {
+  background-color: var(--neom-charcoal);
+  color: var(--neom-white);
+}
+
+/* timed pagination: labelled bars (labels shown on desktop only) */
+.carousel-split .carousel-split-tabs {
+  display: flex;
+  gap: 5px;
+  margin-top: 31px;
+}
+
+.carousel-split .carousel-split-tab {
+  flex: 1 1 0;
+  position: relative;
+  display: block;
+  min-height: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(29 31 34 / 30%);
+  font: inherit;
+  text-align: start;
+  white-space: normal;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.carousel-split .carousel-split-tab.active {
+  color: var(--neom-black);
+  pointer-events: none;
+}
+
+/* track */
+.carousel-split .carousel-split-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgb(29 31 34 / 30%);
+}
+
+/* larger hit area for the bare bars on mobile/tablet */
+.carousel-split .carousel-split-tab::after {
+  content: '';
+  position: absolute;
+  inset: -12px 0;
+}
+
+/* fill */
+.carousel-split .carousel-split-progress {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--neom-black);
+}
+
+.carousel-split .carousel-split-tab.done .carousel-split-progress {
+  width: 100%;
+}
+
+.carousel-split .carousel-split-tab.active .carousel-split-progress {
+  animation: carousel-split-progress var(--carousel-split-duration, 8000ms) linear forwards;
+}
+
+.carousel-split.paused .carousel-split-tab.active .carousel-split-progress {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-split-progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.carousel-split .carousel-split-tab-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-split .carousel-split-slide,
+  .carousel-split .carousel-split-slide.active {
+    transition: none;
+  }
+
+  .carousel-split .carousel-split-tab.active .carousel-split-progress {
+    animation: none;
+    width: 100%;
+  }
+}
+
+@media (width >= 768px) {
+  main > .section > .carousel-split-wrapper {
+    padding: 0 48px;
+  }
+
+  .carousel-split {
+    margin: calc(48px - var(--section-padding)) 0;
+  }
+
+  .carousel-split .carousel-split-slide {
+    grid-template-rows: auto 50.58vh auto;
+  }
+
+  /* source .m-componentHeader max-width */
+  .carousel-split .carousel-split-slide-content p.carousel-split-eyebrow,
+  .carousel-split .carousel-split-slide-content h2 {
+    max-width: 66.6667vw;
+  }
+
+  .carousel-split .carousel-split-slide-content h2 {
+    font-size: 31px;
+  }
+
+  main .carousel-split a.button:any-link {
+    width: auto;
+  }
+
+  .carousel-split .carousel-split-tabs {
+    margin-top: 32px;
+  }
+}
+
+@media (width >= 900px) {
+  main > .section > .carousel-split-wrapper {
+    padding: 0 70px;
+  }
+
+  /* source: 70px above the slide, 49px below the labelled bars */
+  .carousel-split {
+    margin: calc(70px - var(--section-padding)) 0 calc(49px - var(--section-padding));
+  }
+
+  .carousel-split .carousel-split-slide {
+    grid-template-columns: calc(31.08% - 30px) calc(68.92% - 30px);
+    grid-template-rows: 1fr 84px;
+    column-gap: 60px;
+  }
+
+  .carousel-split .carousel-split-slide-content p.carousel-split-eyebrow {
+    margin-bottom: 40px;
+  }
+
+  .carousel-split .carousel-split-slide-content h2 {
+    margin-bottom: 24px;
+    font-size: var(--heading-font-size-xl);
+  }
+
+  .carousel-split .carousel-split-slide-content p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .carousel-split .carousel-split-slide-media {
+    grid-area: 1 / 2 / 3 / 3;
+    min-height: 65.9891vh;
+  }
+
+  .carousel-split .carousel-split-slide-cta {
+    grid-row: 2;
+    align-self: end;
+    margin-top: 40px;
+  }
+
+  main .carousel-split a.button:any-link {
+    min-height: 44px;
+    line-height: 20px;
+  }
+
+  .carousel-split .carousel-split-tabs {
+    gap: 15px;
+    margin-top: 70px;
+  }
+
+  .carousel-split .carousel-split-tab {
+    padding: 20px 0;
+  }
+
+  .carousel-split .carousel-split-tab::after {
+    content: none;
+  }
+
+  .carousel-split .carousel-split-tab-label {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: var(--heading-letter-spacing);
+    text-transform: uppercase;
+    white-space: normal;
+  }
+}
+
+@media (width >= 1600px) {
+  .carousel-split .carousel-split-slide {
+    grid-template-columns: calc(32.81% - 30px) calc(67.19% - 30px);
+  }
+}
+
+@media (width >= 1728px) {
+  .carousel-split .carousel-split-slide {
+    grid-template-columns: calc(27.81% - 30px) calc(72.19% - 30px);
+  }
+}
+
+@media (width >= 1920px) and (height >= 1080px) {
+  .carousel-split .carousel-split-slide-media {
+    min-height: 712px;
+  }
+}

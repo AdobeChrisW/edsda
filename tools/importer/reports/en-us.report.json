@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us",
+  "path": "en-us",
+  "timestamp": "2026-11-07T17:42:10.944Z",
+  "title": "NEOM: Made to Change",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "tabs-map-stats",
+    "columns-media",
+    "columns-media",
+    "cards-slider",
+    "cards-news",
+    "form"
+  ]
+}

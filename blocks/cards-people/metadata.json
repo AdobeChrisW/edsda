@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-people",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Filterable grid of people: portrait, name and role; each card opens a bio side panel",
+    "notes": [
+      "Cream background; search input top-left filters the grid; 4-up grid of greyscale square portraits, name in large light type, gold role line, gold arrow.",
+      "The whole card is a button (pointer cursor, keyboard focusable) that opens a 560px cream (#f5f3ea) side panel from the right over a 75% black mask: square portrait, name (21px light), gold role, bio (16px/24px, #565759).",
+      "Panel closes with the 60px circular close button (white outline on the mask, 40px left of the panel; white disc top-right on mobile), Escape or a backdrop click; a Previous / Next bar pages through every person."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional first single-cell row = search placeholder text (enables the filter); then one row per person: cell 1 = portrait, cell 2 = name paragraph + role paragraph (+ optional bio link), cell 3 (optional) = bio (semantic HTML or plain text), hidden in the card and shown in the side panel",
+    "patterns": [
+      "search filter input",
+      "square greyscale portrait",
+      "name + gold role + arrow",
+      "4-up wrapping grid",
+      "bio side panel dialog with prev/next"
+    ],
+    "blockContent": [
+      "11 person cards (portrait, name, role, bio) with a search filter field above; clicking a card opens the bio panel"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us/about/leadership",
+  "usage": {
+    "description": "Leadership / team directories.",
+    "pagesUsing": [
+      "/en-us/about/leadership"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for people listings with portrait + name + role. Use cards-flip when the bio should be shown on the card back."
+}

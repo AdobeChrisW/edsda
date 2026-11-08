@@ -1,0 +1,43 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Image and text rows with eyebrow, heading, copy and pill CTA; image side follows cell order",
+    "notes": [
+      "Page cream background #f9f7f2. Three alternating image/text rows (image left, then right, then left); small gold uppercase eyebrow, uppercase spaced h2, body copy, dark pill button.",
+      "Dark #1d1f22 band; text left (gold eyebrow, white uppercase h2, 2 paragraphs, white pill button with arrow), large aerial image bleeding to the right edge."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per media/text pair; one cell = image, other cell = eyebrow paragraph + h2 + paragraph(s) + CTA link; put the image first or last to choose its side",
+    "patterns": [
+      "image/text rows",
+      "alternating image side per row",
+      "eyebrow + h2 + text + pill CTA",
+      "single row text left, image bleeding right",
+      "reused from rc3 (same row model)"
+    ],
+    "blockContent": [
+      "3 rows: Progress at NEOM (YouTube link), Our commitment to nature, NEOM Sports Club; each = image + eyebrow + h2 + paragraph + CTA",
+      "Text column (eyebrow \"Port of NEOM\", h2 \"Open for business\", 2 paragraphs, Learn more) beside port aerial image"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    {
+      "style": "dark"
+    }
+  ],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Feature rows alternating image left/right, or a single text + image row in a dark section.",
+    "pagesUsing": [
+      "/en-us"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use for media/text splits with an eyebrow. Use columns for generic multi-column layouts."
+}

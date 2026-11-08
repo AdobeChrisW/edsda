@@ -1,0 +1,35 @@
+{
+  "variantName": "cards-slider",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Horizontally scrolling cards with prev/next arrows",
+    "notes": [
+      "Cream background; gold eyebrow and large intro sentence top-left, round next/prev arrow top-right; horizontally scrolling cards (tall image, title, short text, gold \"Explore sector\" arrow link)."
+    ]
+  },
+  "contentPattern": {
+    "structure": "optional single-cell intro row (eyebrow + lead text); then one row per card: cell 1 = tall image, cell 2 = title + short text + arrow link",
+    "patterns": [
+      "horizontal scroll with prev/next arrows",
+      "tall image + title + text + arrow link"
+    ],
+    "blockContent": [
+      "4 sector cards (Mobility, Water, Energy, Tech and Digital), each image + title + text + Explore Sector link to sector detail page; horizontal slider with arrows"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [],
+  "sourceUrl": "https://www.neom.com/en-us",
+  "usage": {
+    "description": "Sector or category carousels of cards.",
+    "pagesUsing": [
+      "/en-us",
+      "/en-us/newsroom/events/fii-2025"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use when cards overflow horizontally. Use cards for a static grid."
+}

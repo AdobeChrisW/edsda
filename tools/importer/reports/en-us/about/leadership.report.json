@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/about/leadership",
+  "path": "en-us/about/leadership",
+  "timestamp": "2026-11-07T17:42:31.049Z",
+  "title": "Our leadership",
+  "template": "about",
+  "blocks": [
+    "breadcrumbs",
+    "form",
+    "hero-banner",
+    "cards-people"
+  ]
+}

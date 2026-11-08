@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/about/social-responsibility",
+  "path": "en-us/about/social-responsibility",
+  "timestamp": "2026-11-07T17:42:37.696Z",
+  "title": "Corporate Social Responsibility | NEOM",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "breadcrumbs",
+    "cards-news",
+    "form",
+    "cards-boxed",
+    "carousel-split",
+    "cards-downloads"
+  ]
+}

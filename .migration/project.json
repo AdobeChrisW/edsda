@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "edsda": {
+      "previewOrg": "AdobeChrisW",
+      "previewSite": "edsda",
+      "contentHostUrl": "https://content.da.live/adobechrisw/edsda/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

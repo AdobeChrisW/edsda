@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-flip",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Square photo cards with a name; a + button flips the card to show a bio",
+    "notes": [
+      "Cream background; centred uppercase heading \"GOALKEEPERS\"; 3-up square player cards (photo with shirt number and flag, name and + button bottom-left); + flips the card to show a bio."
+    ]
+  },
+  "contentPattern": {
+    "structure": "one row per card: cell 1 = photo, cell 2 = name heading + bio paragraph(s) shown on the back",
+    "patterns": [
+      "front: photo + name + plus button",
+      "back: name + bio text",
+      "3-up wrapping grid"
+    ],
+    "blockContent": [
+      "3 player flip cards, each photo + name (front) and bio paragraph (back), + button flips"
+    ]
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sectionMetadata": [
+    {
+      "style": "centered"
+    }
+  ],
+  "sourceUrl": "https://www.neom.com/en-us/neom-sports-club/the-team",
+  "usage": {
+    "description": "Player or team member cards with a short bio.",
+    "pagesUsing": [
+      "/en-us/neom-sports-club/the-team"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-06"
+  },
+  "reuseGuidance": "Use when each card needs hidden detail text. Use cards-people for linked directory entries."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.neom.com/en-us/regions",
+  "path": "en-us/regions",
+  "timestamp": "2026-11-07T17:43:16.477Z",
+  "title": "Our Region: A New Model for Industry and Living",
+  "template": "about",
+  "blocks": [
+    "carousel-hero-video",
+    "columns-media",
+    "breadcrumbs",
+    "cards-news",
+    "form"
+  ]
+}
