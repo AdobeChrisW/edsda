@@ -1,0 +1,612 @@
+{
+  "url": "https://www.neom.com/en-us/about/social-responsibility",
+  "title": "Corporate Social Responsibility | NEOM",
+  "timestamp": "2026-11-06T14:14:49.606Z",
+  "duration": "16.3s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(sB(s,sB),sB,sB,sB(2x2,3x1),sB,s(s,2x2),sB(s,2x1),sB(2x1,3x1),2x1B(s,s)),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide.-solidMask > div.a-image",
+      "rc1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide.-solidMask > div.b-heroSliderV2__copy.-bottom.-start.-gradient",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c4": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c58-highlight-slideshow.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c4c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c58-highlight-slideshow.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-highlightSlideshow.b-highlightSlideshow__pillars.noRoundedCorners.t-light.-isInitialised > div.b-highlightSlideshow__container > div.b-highlightSlideshow__items",
+      "rc1c4c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c58-highlight-slideshow.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-highlightSlideshow.b-highlightSlideshow__pillars.noRoundedCorners.t-light.-isInitialised > div.b-highlightSlideshow__container > div.b-highlightSlideshow__pagination",
+      "rc1c5": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c6": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c30-downloads.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c6c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c30-downloads.aem-GridColumn.aem-GridColumn--default--12 > section.b-downloads.-row.-isInitialised > div.b-downloads__container > div.b-downloads__listWrapper > h2.b-downloads__heading",
+      "rc1c6c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c30-downloads.aem-GridColumn.aem-GridColumn--default--12 > section.b-downloads.-row.-isInitialised > div.b-downloads__container > div.b-downloads__listWrapper > ul.b-downloads__list",
+      "rc1c7": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c7c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-dark.-start.-isInitialised > div.b-boxedList__background",
+      "rc1c7c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-dark.-start.-isInitialised > div.b-boxedList__container",
+      "rc1c8": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c8c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-light.-carousel.-isInitialised > div.b-newsroomDch__container > div.b-newsroomDch__header",
+      "rc1c8c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-light.-carousel.-isInitialised > div.b-newsroomDch__container > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events",
+      "rc1c9": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c9c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > div.m-componentHeader__headingWrapper",
+      "rc1c9c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > p.a-moustache.-small",
+      "rc2": "#app > div.app__root.t-neom.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container"
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-breadcrumbs.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc3",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.t-dark.-isInitialised > div.o-contentGrid.-single.-small.t-dark"
+      },
+      {
+        "id": "rc4",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c58-highlight-slideshow.t-light.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc5",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.t-light.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c30-downloads.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-dark.-start.-isInitialised"
+      },
+      {
+        "id": "rc8",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc9",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc10",
+        "selector": "#app > div.app__root.t-neom.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 4381.8125
+    },
+    "splits": [
+      {
+        "selector": "div.b-newsletterSubscription__header > div.b-newsletterSubscription__form",
+        "sides": [
+          [
+            0.676923076923077,
+            1
+          ]
+        ],
+        "top": 4253.8125,
+        "bottom": 4349.8125,
+        "cover": 0.021908742101584677,
+        "above": 6
+      }
+    ],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "0a85914c6e9b",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 740
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image + heading + text"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "~@(~(T))",
+        "variant": "~@(~k(Tw))",
+        "variantClean": "~@(~k(Tw))"
+      },
+      "screenshot": "blocks/0a85914c6e9b.jpg"
+    },
+    {
+      "id": "c96988ef701a",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.c98-breadcrumbs.breadcrumb.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 740,
+        "width": 1440,
+        "height": 56
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "c98-breadcrumbs",
+      "features": {
+        "skeleton": "[[T|svg]|T]",
+        "variant": "[[To|svg]|Tn]",
+        "variantClean": "[[Tk|svg]|Tk]"
+      },
+      "screenshot": "blocks/c96988ef701a.jpg"
+    },
+    {
+      "id": "e7083e3682e5",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > div.m-paragraph__heading",
+      "bounds": {
+        "x": 400,
+        "y": 936,
+        "width": 640,
+        "height": 53
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "m-paragraph-heading",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "2b46c0b3894c",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > div.m-paragraph__content.s-content.-medium",
+      "bounds": {
+        "x": 400,
+        "y": 1019,
+        "width": 640,
+        "height": 93
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "m-paragraph-content",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "57d35de9efe9",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c58-highlight-slideshow.t-light.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.b-highlightSlideshow__items",
+      "bounds": {
+        "x": 0,
+        "y": 1252,
+        "width": 1440,
+        "height": 845
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + text + heading + link"
+      },
+      "description": "b-highlightslideshow-items",
+      "features": {
+        "skeleton": "([T*2.25|T] [T])",
+        "variant": "([T*2.25|Tko] [Tw])",
+        "variantClean": "([T*2.25|Tk] [Tw])"
+      },
+      "screenshot": "blocks/57d35de9efe9.jpg"
+    },
+    {
+      "id": "6bb76216212c",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.t-light.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > div.m-paragraph__heading",
+      "bounds": {
+        "x": 400,
+        "y": 2167,
+        "width": 640,
+        "height": 53
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "m-paragraph-heading",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "a095d28aa303",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.t-light.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > div.m-paragraph__content.s-content.-small",
+      "bounds": {
+        "x": 400,
+        "y": 2250,
+        "width": 640,
+        "height": 144
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "m-paragraph-content",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "904409430181",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c30-downloads.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 2394,
+        "width": 1440,
+        "height": 415
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + list + image + text + link"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[[~(T)|T*1.5]]",
+        "variant": "[[~k(T)|Tko*1.5]]",
+        "variantClean": "[[~k(T)|Tk*1.5]]",
+        "set": true
+      },
+      "screenshot": "blocks/904409430181.jpg"
+    },
+    {
+      "id": "6fdbb26d348e",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__header > div > div > p.a-eyebrow.-medium",
+      "bounds": {
+        "x": 400,
+        "y": 2873,
+        "width": 640,
+        "height": 22
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "a-eyebrow",
+      "features": {
+        "skeleton": "T",
+        "variant": "To",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "4ba7c3b16267",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__header > div > div > div",
+      "bounds": {
+        "x": 400,
+        "y": 2919,
+        "width": 640,
+        "height": 78
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading"
+      },
+      "description": "m-componentheader-headingwrapper",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "e4a5dbc7e388",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__header > div > div > p.a-moustache.-small > div:nth-child(1)",
+      "bounds": {
+        "x": 400,
+        "y": 3017,
+        "width": 640,
+        "height": 28
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "",
+        "variant": "",
+        "variantClean": ""
+      },
+      "screenshot": null
+    },
+    {
+      "id": "f644cc5f66dc",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__header > div > div > p.a-moustache.-small > div:nth-child(2)",
+      "bounds": {
+        "x": 400,
+        "y": 3045,
+        "width": 640,
+        "height": 28
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "",
+        "variant": "",
+        "variantClean": ""
+      },
+      "screenshot": null
+    },
+    {
+      "id": "8d8f78902538",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__header > div > div > p.a-moustache.-small > div:nth-child(3)",
+      "bounds": {
+        "x": 400,
+        "y": 3073,
+        "width": 640,
+        "height": 28
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "",
+        "variant": "",
+        "variantClean": ""
+      },
+      "screenshot": null
+    },
+    {
+      "id": "6027177e6078",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.-start.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-boxedList__container > div.b-boxedList__slider.swiper-container",
+      "bounds": {
+        "x": 64,
+        "y": 3125,
+        "width": 1312,
+        "height": 420
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + heading + text + link"
+      },
+      "description": "b-boxedlist-slider",
+      "features": {
+        "skeleton": "[~(T ~(T))]",
+        "variant": "[~n(Tw ~w(Tw))]",
+        "variantClean": "[~n(Tk ~w(Tk))]",
+        "set": true
+      },
+      "screenshot": "blocks/6027177e6078.jpg"
+    },
+    {
+      "id": "2a381fc48ff5",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.b-newsroomDch__header",
+      "bounds": {
+        "x": 70,
+        "y": 3673,
+        "width": 1306,
+        "height": 109
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + link"
+      },
+      "description": "b-newsroomdch-header",
+      "features": {
+        "skeleton": "[T*2.5|T]",
+        "variant": "[Tk*2.5|Tk]",
+        "variantClean": "[Tk*2.5|Tk]"
+      },
+      "screenshot": "blocks/2a381fc48ff5.jpg"
+    },
+    {
+      "id": "2b71f165e1bc",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c123-featured-news.t-light.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events",
+      "bounds": {
+        "x": 70,
+        "y": 3822,
+        "width": 1370,
+        "height": 336
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link + image"
+      },
+      "description": "swiper-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/2b71f165e1bc.jpg"
+    },
+    {
+      "id": "f9602bb906da",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 4222,
+        "width": 1440,
+        "height": 160
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + field + button"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T*2|form]",
+        "variant": "[Tw*2|form]",
+        "variantClean": "[Tk*2|form]"
+      },
+      "screenshot": "blocks/f9602bb906da.jpg"
+    }
+  ]
+}

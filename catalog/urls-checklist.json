@@ -1,0 +1,108 @@
+{
+  "analysis-urls-checklist": {
+    "captured": "2026-11-06T14:14:28.312Z",
+    "totalPages": 12,
+    "statusBreakdown": {
+      "marked": 0,
+      "analyzed": 12
+    },
+    "pages": {
+      "https://www.neom.com/en-us": {
+        "url": "https://www.neom.com/en-us",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:14:51.592Z",
+        "slug": "www_neom_com_en-us--a88a926e",
+        "title": "NEOM: Made to Change",
+        "blockCount": 10
+      },
+      "https://www.neom.com/en-us/about": {
+        "url": "https://www.neom.com/en-us/about",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:14:51.086Z",
+        "slug": "www_neom_com_en-us_about--c9ada898",
+        "title": "NEOM: A Region in The Making",
+        "blockCount": 18
+      },
+      "https://www.neom.com/en-us/about/leadership": {
+        "url": "https://www.neom.com/en-us/about/leadership",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:14:47.092Z",
+        "slug": "www_neom_com_en-us_about_leadership--a4e3a8f0",
+        "title": "Our leadership",
+        "blockCount": 5
+      },
+      "https://www.neom.com/en-us/about/social-responsibility": {
+        "url": "https://www.neom.com/en-us/about/social-responsibility",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:14:49.774Z",
+        "slug": "www_neom_com_en-us_about_social-responsibility--0ea91241",
+        "title": "Corporate Social Responsibility | NEOM",
+        "blockCount": 17
+      },
+      "https://www.neom.com/en-us/regions": {
+        "url": "https://www.neom.com/en-us/regions",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:14:51.385Z",
+        "slug": "www_neom_com_en-us_regions--f1672353",
+        "title": "Our Region: A New Model for Industry and Living",
+        "blockCount": 7
+      },
+      "https://www.neom.com/en-us/regions/theline": {
+        "url": "https://www.neom.com/en-us/regions/theline",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:02.696Z",
+        "slug": "www_neom_com_en-us_regions_theline--7ed1ca2f",
+        "title": "THE LINE: A New Urban Future",
+        "blockCount": 10
+      },
+      "https://www.neom.com/en-us/newsroom": {
+        "url": "https://www.neom.com/en-us/newsroom",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:00.738Z",
+        "slug": "www_neom_com_en-us_newsroom--fa24ccfa",
+        "title": "News & Media Center",
+        "blockCount": 6
+      },
+      "https://www.neom.com/en-us/newsroom/neom-green-hydrogen": {
+        "url": "https://www.neom.com/en-us/newsroom/neom-green-hydrogen",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:02.888Z",
+        "slug": "www_neom_com_en-us_newsroom_neom-green-hydrogen--2188cde3",
+        "title": "David Edmondson as NEOM Green Hydrogen Company’s CEO",
+        "blockCount": 15
+      },
+      "https://www.neom.com/en-us/newsroom/events/fii-2025": {
+        "url": "https://www.neom.com/en-us/newsroom/events/fii-2025",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:05.691Z",
+        "slug": "www_neom_com_en-us_newsroom_events_fii-2025--7c84a9eb",
+        "title": "FII 2025",
+        "blockCount": 11
+      },
+      "https://www.neom.com/en-us/neom-sports-club": {
+        "url": "https://www.neom.com/en-us/neom-sports-club",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:09.248Z",
+        "slug": "www_neom_com_en-us_neom-sports-club--f6f29b74",
+        "title": "NEOM Sports Club",
+        "blockCount": 9
+      },
+      "https://www.neom.com/en-us/neom-sports-club/the-team": {
+        "url": "https://www.neom.com/en-us/neom-sports-club/the-team",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:14.039Z",
+        "slug": "www_neom_com_en-us_neom-sports-club_the-team--947e4265",
+        "title": "The Team",
+        "blockCount": 19
+      },
+      "https://www.neom.com/en-us/neom-sports-club/news/neom-sc-signs-global-star-alexandre-lacazette": {
+        "url": "https://www.neom.com/en-us/neom-sports-club/news/neom-sc-signs-global-star-alexandre-lacazette",
+        "status": "analyzed",
+        "analyzedAt": "2026-11-06T14:15:11.852Z",
+        "slug": "www_neom_com_en-us_neom-sports-club_news_neom-sc-signs-global-star-alexandre-lacazette--bcbaf559",
+        "title": "NEOM S.C. signs global star Alexandre Lacazette",
+        "blockCount": 5
+      }
+    }
+  }
+}

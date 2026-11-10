@@ -1,0 +1,249 @@
+{
+  "url": "https://www.neom.com/en-us/about/leadership",
+  "title": "Our leadership",
+  "timestamp": "2026-11-06T14:14:46.998Z",
+  "duration": "15.3s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(sB(s(sB,s),s),s,s(s(s,s),4x3,s),2x1B(s,s)),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroBanner.-hasBackgroundAsset > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground",
+      "rc1c1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroBanner.-hasBackgroundAsset > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground > div.m-componentBackground__container > div.m-componentBackground__background > div.a-image > span.a-image__background",
+      "rc1c1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroBanner.-hasBackgroundAsset > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground > div.m-componentBackground__container > div.m-componentBackground__background > div.a-image > picture.a-image__picture",
+      "rc1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroBanner.-hasBackgroundAsset > div.o-heroContent.t-darkMono.-fullHeight > div.o-heroContent__container.-start.-bottom",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section.b-cardGrid.-isInitialised > div.b-cardGrid__filters",
+      "rc1c3c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section.b-cardGrid.-isInitialised > div.b-cardGrid__filters > div.o-filter > div.o-filter__container.-searchOnly",
+      "rc1c3c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section.b-cardGrid.-isInitialised > div.b-cardGrid__filters > div.o-filter > div.o-filter__selectedFilterList",
+      "rc1c3c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section.b-cardGrid.-isInitialised > div.b-cardGrid__containerItems",
+      "rc1c3c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section.b-cardGrid.-isInitialised > div.b-cardGrid__controls",
+      "rc1c4": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c4c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > div.m-componentHeader__headingWrapper",
+      "rc1c4c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > p.a-moustache.-small",
+      "rc2": "#app > div.app__root.t-neom.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroBanner.-hasBackgroundAsset > div.o-heroContent.t-darkMono.-fullHeight"
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc5",
+        "selector": "#app > div.app__root.t-neom.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 2785.15625
+    },
+    "splits": [
+      {
+        "selector": "div.b-newsletterSubscription__header > div.b-newsletterSubscription__form",
+        "sides": [
+          [
+            0.676923076923077,
+            1
+          ]
+        ],
+        "top": 2657.15625,
+        "bottom": 2753.15625,
+        "cover": 0.03446844319775596,
+        "above": 2
+      }
+    ],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "f2e460423580",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c26-hero-banner.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image + heading + text"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "~@(T)",
+        "variant": "~@(Tw)",
+        "variantClean": "~@(Tk)"
+      },
+      "screenshot": "blocks/f2e460423580.jpg"
+    },
+    {
+      "id": "846b0accf62c",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 900,
+        "width": 1440,
+        "height": 56
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "c98-breadcrumbs",
+      "features": {
+        "skeleton": "[[T|svg]|T]",
+        "variant": "[[To|svg]|Tn]",
+        "variantClean": "[[Tw|svg]|Tk]"
+      },
+      "screenshot": "blocks/846b0accf62c.jpg"
+    },
+    {
+      "id": "48389490fae9",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-cardGrid__filters > div > div.o-filter__container.-searchOnly",
+      "bounds": {
+        "x": 0,
+        "y": 1026,
+        "width": 1440,
+        "height": 60
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "field"
+      },
+      "description": "o-filter-container",
+      "features": {
+        "skeleton": "{input svg}",
+        "variant": "{input~w svg}",
+        "variantClean": "{input~w svg}"
+      },
+      "screenshot": "blocks/48389490fae9.jpg"
+    },
+    {
+      "id": "1ab3d9b66503",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c70-card-grid.aem-GridColumn.aem-GridColumn--default--12 > section > div.b-cardGrid__containerItems",
+      "bounds": {
+        "x": 0,
+        "y": 1146,
+        "width": 1440,
+        "height": 1369
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + text"
+      },
+      "description": "b-cardgrid-containeritems",
+      "features": {
+        "skeleton": "[(T svg)]",
+        "variant": "[(Tko svg)]",
+        "variantClean": "[(Tw svg)|(Tk svg)|(Tw svg)] [(Tw svg)] [(Tw svg)|(Tk svg)|(Tw svg)]",
+        "set": true
+      },
+      "screenshot": "blocks/1ab3d9b66503.jpg"
+    },
+    {
+      "id": "f9602bb906da",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 2625,
+        "width": 1440,
+        "height": 160
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + field + button"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T*2|form]",
+        "variant": "[Tw*2|form]",
+        "variantClean": "[Tk*2|form]"
+      },
+      "screenshot": "blocks/f9602bb906da.jpg"
+    }
+  ]
+}

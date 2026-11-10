@@ -1,0 +1,199 @@
+{
+  "url": "https://www.neom.com/en-us/neom-sports-club/news/neom-sc-signs-global-star-alexandre-lacazette",
+  "title": "NEOM S.C. signs global star Alexandre Lacazette",
+  "timestamp": "2026-11-06T14:15:11.819Z",
+  "duration": "7.6s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(sB,sB),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__banner",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__container",
+      "rc2": "#app > div.app__root.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__banner",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__banner"
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__container",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c44-article-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-articleContent.-hasBackgroundImage.-isInitialised > div.b-articleContent__container > div.b-articleContent__page"
+      },
+      {
+        "id": "rc3",
+        "selector": "#app > div.app__root.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 2237.8125
+    },
+    "splits": [],
+    "start": {
+      "kind": "photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "84454cd24eb3",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div > section > div.b-articleContent__banner",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 780
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image"
+      },
+      "description": "b-articlecontent-banner",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "2a691b0196f6",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div > section > div.b-articleContent__container > div > div > header > p",
+      "bounds": {
+        "x": 400,
+        "y": 720,
+        "width": 640,
+        "height": 21
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "b-articlecontent-datepublished",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tn",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "25509947bf05",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div > section > div.b-articleContent__container > div > div > header > h1",
+      "bounds": {
+        "x": 400,
+        "y": 761,
+        "width": 640,
+        "height": 106
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "a-heading",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "f44fa47be753",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div > section > div.b-articleContent__container > div > div > div",
+      "bounds": {
+        "x": 400,
+        "y": 927,
+        "width": 640,
+        "height": 1011
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "s-content",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tn",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "adacc26c6afc",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div > section > div.b-articleContent__container > div > div > footer",
+      "bounds": {
+        "x": 400,
+        "y": 1938,
+        "width": 640,
+        "height": 120
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + button"
+      },
+      "description": "b-articlecontent-footer",
+      "features": {
+        "skeleton": "[T|button]",
+        "variant": "[Tk|button]",
+        "variantClean": "[Tk|button]"
+      },
+      "screenshot": "blocks/adacc26c6afc.jpg"
+    }
+  ]
+}

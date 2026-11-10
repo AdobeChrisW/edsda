@@ -1,0 +1,425 @@
+{
+  "url": "https://www.neom.com/en-us/regions/theline",
+  "title": "THE LINE: A New Urban Future",
+  "timestamp": "2026-11-06T14:15:02.601Z",
+  "duration": "14.0s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(2x1(sB,s(sB(,),s)),sB,2x1,sB(s,s(s,s,s),3x1),s(s(s,s),3x1),sB(2x1,s(2x1,7x1)),2x1B(s,s)),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__transitionOverlay",
+      "rc1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content",
+      "rc1c1c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items",
+      "rc1c1c2c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground.-solidMask",
+      "rc1c1c2c1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground.-solidMask > div.m-componentBackground__container > div.m-componentBackground__background > div.a-image",
+      "rc1c1c2c1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground.-solidMask > div.m-componentBackground__container > div.m-componentBackground__background > div.a-video",
+      "rc1c1c2c1c1c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground.-solidMask > div.m-componentBackground__container > div.m-componentBackground__background > div.a-video > video.a-video__video",
+      "rc1c1c2c1c1c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.m-componentBackground.-solidMask > div.m-componentBackground__container > div.m-componentBackground__background > div.a-video > div.a-video__enhancedPoster",
+      "rc1c1c2c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-heroSlider__items > li.swiper-slide.b-heroSlider__item.-isVisible.swiper-slide-active > div.o-heroContent.t-darkMono.-fullHeight > div.o-heroContent__container.-start.-bottom",
+      "rc1c1c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSlider.-hasBackgroundImage > div.b-heroSlider__container > div.b-heroSlider__content > div.swiper__container.b-heroSlider__swiperContainer.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > div.a-pageIndicators.swiper-pagination-bullets",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c4": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c4c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.m-componentBackground",
+      "rc1c4c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.b-boxedList__background",
+      "rc1c4c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.b-boxedList__background > div:nth-of-type(1)",
+      "rc1c4c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.b-boxedList__background > div:nth-of-type(2)",
+      "rc1c4c2c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.b-boxedList__background > div:nth-of-type(3)",
+      "rc1c4c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised > div.b-boxedList__container",
+      "rc1c5": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c5c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section.b-videoGallery.-isInitialised > div.b-videoGallery__container > div.m-componentHeader.-center",
+      "rc1c5c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section.b-videoGallery.-isInitialised > div.b-videoGallery__container > div.m-componentHeader.-center > div.m-componentHeader__container > p.a-eyebrow.-small",
+      "rc1c5c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section.b-videoGallery.-isInitialised > div.b-videoGallery__container > div.m-componentHeader.-center > div.m-componentHeader__container > div.m-componentHeader__headingWrapper",
+      "rc1c5c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section.b-videoGallery.-isInitialised > div.b-videoGallery__container > ul.b-videoGallery__items",
+      "rc1c6": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c6c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-dark.-carousel.-isInitialised > div.b-newsroomDch__container > div.b-newsroomDch__header",
+      "rc1c6c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-dark.-carousel.-isInitialised > div.b-newsroomDch__container > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events",
+      "rc1c6c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-dark.-carousel.-isInitialised > div.b-newsroomDch__container > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > div.b-newsroomDch__controls",
+      "rc1c6c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-dark.-carousel.-isInitialised > div.b-newsroomDch__container > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events > ul.swiper-wrapper.b-newsroomDch__items.-alignDate",
+      "rc1c7": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c7c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > div.m-componentHeader__headingWrapper",
+      "rc1c7c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised > div.b-newsletterSubscription__container > div.b-newsletterSubscription__header:nth-of-type(2) > div.m-componentHeader.-start > div.m-componentHeader__container > p.a-moustache.-small",
+      "rc2": "#app > div.app__root.t-neom.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.t-light.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12 > section.b-boxedList.t-light.-center.t-darkMono.-isInitialised"
+      },
+      {
+        "id": "rc5",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#282a2d",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsroomDch.t-dark.-carousel.-isInitialised"
+      },
+      {
+        "id": "rc7",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.-redesigned.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc8",
+        "selector": "#app > div.app__root.t-neom.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 3947.609375
+    },
+    "splits": [
+      {
+        "selector": "div.b-newsletterSubscription__header > div.b-newsletterSubscription__form",
+        "sides": [
+          [
+            0.676923076923077,
+            1
+          ]
+        ],
+        "top": 3819.609375,
+        "bottom": 3915.609375,
+        "cover": 0.024318515557279523,
+        "above": 4
+      }
+    ],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "dc36165529b5",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.b-heroSlider__content",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "list + image + video + heading + text"
+      },
+      "description": "b-heroslider-content",
+      "features": {
+        "skeleton": "{[~({~@(video) T})] ~}",
+        "variant": "{[~k({~@(video) Tw})] ~o}",
+        "variantClean": "{[~k({~@(video) Tw})] ~o}"
+      },
+      "screenshot": "blocks/dc36165529b5.jpg"
+    },
+    {
+      "id": "e1382de992e9",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.c98-breadcrumbs.breadcrumb.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 900,
+        "width": 1440,
+        "height": 56
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "c98-breadcrumbs",
+      "features": {
+        "skeleton": "[[T|svg]|T]",
+        "variant": "[[To|svg]|Tn]",
+        "variantClean": "[[Tw|svg]|Tk]"
+      },
+      "screenshot": "blocks/e1382de992e9.jpg"
+    },
+    {
+      "id": "bc46cc5cb30d",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 956,
+        "width": 1440,
+        "height": 860
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading + text + image"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk|T]",
+        "variantClean": "[Tk|T]"
+      },
+      "screenshot": "blocks/bc46cc5cb30d.jpg"
+    },
+    {
+      "id": "ca4a163b5b1d",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c18-boxed-list.t-light.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 1816,
+        "width": 1440,
+        "height": 696
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "dense",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image + text + heading + list"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "~@(T [~(svg T)])",
+        "variant": "~@(Tow [~w(svg Tw)])",
+        "variantClean": "~@(Tk [~w(svg Tw)])"
+      },
+      "screenshot": "blocks/ca4a163b5b1d.jpg"
+    },
+    {
+      "id": "6bd8bafe127a",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > p",
+      "bounds": {
+        "x": 240,
+        "y": 2552,
+        "width": 960,
+        "height": 14
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "a-eyebrow",
+      "features": {
+        "skeleton": "T",
+        "variant": "To",
+        "variantClean": "Tw"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "e35a98ea7312",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div",
+      "bounds": {
+        "x": 240,
+        "y": 2579,
+        "width": 960,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "m-componentheader-headingwrapper",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "26dacbb1b8b3",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c112-video-gallery.aem-GridColumn.aem-GridColumn--default--12 > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 2650,
+        "width": 1300,
+        "height": 437
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image"
+      },
+      "description": "b-videogallery-items",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/26dacbb1b8b3.jpg"
+    },
+    {
+      "id": "f8ef0902dd8b",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.b-newsroomDch__header",
+      "bounds": {
+        "x": 70,
+        "y": 3191,
+        "width": 1306,
+        "height": 109
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + link"
+      },
+      "description": "b-newsroomdch-header",
+      "features": {
+        "skeleton": "[T*2|T]",
+        "variant": "[Tw*2|Tw]",
+        "variantClean": "[Tk*2|Tw]"
+      },
+      "screenshot": "blocks/f8ef0902dd8b.jpg"
+    },
+    {
+      "id": "8ad468d1a487",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c123-featured-news.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section > div > div.swiper__container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events",
+      "bounds": {
+        "x": 70,
+        "y": 3340,
+        "width": 1370,
+        "height": 384
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "button + list + link + image"
+      },
+      "description": "swiper-container",
+      "features": {
+        "skeleton": "{[button] [T]}",
+        "variant": "{[button] [Tnw]}",
+        "variantClean": "{[button] [Tk]}"
+      },
+      "screenshot": "blocks/8ad468d1a487.jpg"
+    },
+    {
+      "id": "f9602bb906da",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 3788,
+        "width": 1440,
+        "height": 160
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + field + button"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T*2|form]",
+        "variant": "[Tw*2|form]",
+        "variantClean": "[Tk*2|form]"
+      },
+      "screenshot": "blocks/f9602bb906da.jpg"
+    }
+  ]
+}

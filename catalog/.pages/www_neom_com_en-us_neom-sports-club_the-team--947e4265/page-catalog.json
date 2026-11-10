@@ -1,0 +1,653 @@
+{
+  "url": "https://www.neom.com/en-us/neom-sports-club/the-team",
+  "title": "The Team",
+  "timestamp": "2026-11-06T14:15:14.008Z",
+  "duration": "11.8s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(sB(s,sB),s,s(s,3x1),s(s,3x2),s(s,3x1),s(s,3x2),s(s,3x2,s),sB(s,s),sB),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide > div.a-image",
+      "rc1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide > div.b-heroSliderV2__copy.-bottom.-start.-gradient",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc1c3c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__header",
+      "rc1c3c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > section.b-flipCards.-isInitialised > div.b-flipCards__container > ul.b-flipCards__items.-noImageOverlay",
+      "rc1c4": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+      "rc1c4c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__header",
+      "rc1c4c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-flipCards.-isInitialised > div.b-flipCards__container > ul.b-flipCards__items.-noImageOverlay",
+      "rc1c5": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5)",
+      "rc1c5c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__header",
+      "rc1c5c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5) > section.b-flipCards.-isInitialised > div.b-flipCards__container > ul.b-flipCards__items.-noImageOverlay",
+      "rc1c6": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)",
+      "rc1c6c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__header",
+      "rc1c6c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6) > section.b-flipCards.-isInitialised > div.b-flipCards__container > ul.b-flipCards__items.-noImageOverlay",
+      "rc1c7": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7)",
+      "rc1c7c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__header",
+      "rc1c7c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7) > section.b-flipCards.-isInitialised > div.b-flipCards__container > ul.b-flipCards__items.-noImageOverlay",
+      "rc1c7c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7) > section.b-flipCards.-isInitialised > div.b-flipCards__container > div.b-flipCards__loadMoreButtonWrapper",
+      "rc1c8": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c8c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.-isInitialised > div.o-contentGrid.-single.-small.-hasBackgroundImage > div.m-componentBackground",
+      "rc1c8c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.-isInitialised > div.o-contentGrid.-single.-small.-hasBackgroundImage > div.o-contentGrid__container",
+      "rc1c9": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2": "#app > div.app__root.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-isInitialised > div.b-heroSliderV2__container"
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc5",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c117-flip-cards.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc8",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.-isInitialised > div.o-contentGrid.-single.-small.-hasBackgroundImage"
+      },
+      {
+        "id": "rc9",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc10",
+        "selector": "#app > div.app__root.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 6566.953125
+    },
+    "splits": [],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "0a85914c6e9b",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image + heading + text"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "~@(~(T))",
+        "variant": "~@(~k(Tw))",
+        "variantClean": "~@(~k(Tw))"
+      },
+      "screenshot": "blocks/0a85914c6e9b.jpg"
+    },
+    {
+      "id": "846b0accf62c",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.c98-breadcrumbs.breadcrumb.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 900,
+        "width": 1440,
+        "height": 56
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "c98-breadcrumbs",
+      "features": {
+        "skeleton": "[[T|svg]|T]",
+        "variant": "[[To|svg]|Tn]",
+        "variantClean": "[[Tw|svg]|Tk]"
+      },
+      "screenshot": "blocks/846b0accf62c.jpg"
+    },
+    {
+      "id": "0e7cbae3cb75",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(3) > section > div > div",
+      "bounds": {
+        "x": 200,
+        "y": 996,
+        "width": 1040,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "b-flipcards-header",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "55b997e2815b",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div:nth-child(3) > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 1175,
+        "width": 1300,
+        "height": 420
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + button"
+      },
+      "description": "b-flipcards-items",
+      "features": {
+        "skeleton": "[~@(T button)]",
+        "variant": "[~@(Tw button)]",
+        "variantClean": "[~@(Tw button)]",
+        "set": true
+      },
+      "screenshot": "blocks/55b997e2815b.jpg"
+    },
+    {
+      "id": "190851c2bc68",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(4) > section > div > div",
+      "bounds": {
+        "x": 200,
+        "y": 1675,
+        "width": 1040,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "b-flipcards-header",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "c67009b9f290",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div:nth-child(4) > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 1854,
+        "width": 1300,
+        "height": 860
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + button"
+      },
+      "description": "b-flipcards-items",
+      "features": {
+        "skeleton": "[~@(T button)]",
+        "variant": "[~@(Tw button)]",
+        "variantClean": "[~@(Tw button)]",
+        "set": true
+      },
+      "screenshot": "blocks/c67009b9f290.jpg"
+    },
+    {
+      "id": "50d04d41d6a1",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(5) > section > div > div",
+      "bounds": {
+        "x": 200,
+        "y": 2794,
+        "width": 1040,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "b-flipcards-header",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "4751e4ce5331",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div:nth-child(5) > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 2973,
+        "width": 1300,
+        "height": 420
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + button"
+      },
+      "description": "b-flipcards-items",
+      "features": {
+        "skeleton": "[~@(T button)]",
+        "variant": "[~@(Tw button)]",
+        "variantClean": "[~@(Tw button)]",
+        "set": true
+      },
+      "screenshot": "blocks/4751e4ce5331.jpg"
+    },
+    {
+      "id": "076b1926d182",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(6) > section > div > div",
+      "bounds": {
+        "x": 200,
+        "y": 3473,
+        "width": 1040,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "b-flipcards-header",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "11638b958a35",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div:nth-child(6) > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 3652,
+        "width": 1300,
+        "height": 860
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + button"
+      },
+      "description": "b-flipcards-items",
+      "features": {
+        "skeleton": "[~@(T button)]",
+        "variant": "[~@(Tw button)]",
+        "variantClean": "[~@(Tw button)]",
+        "set": true
+      },
+      "screenshot": "blocks/11638b958a35.jpg"
+    },
+    {
+      "id": "24ed9a28c949",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(7) > section > div > div.b-flipCards__header",
+      "bounds": {
+        "x": 200,
+        "y": 4622,
+        "width": 1040,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "b-flipcards-header",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "6494980f749d",
+      "type": "cards",
+      "selector": "#app-content > div > div > div > div > div:nth-child(7) > section > div > ul",
+      "bounds": {
+        "x": 70,
+        "y": 4801,
+        "width": 1300,
+        "height": 860
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + image + button"
+      },
+      "description": "b-flipcards-items",
+      "features": {
+        "skeleton": "[~@(T button)]",
+        "variant": "[~@(Tw button)]",
+        "variantClean": "[~@(Tw button)]",
+        "set": true
+      },
+      "screenshot": "blocks/6494980f749d.jpg"
+    },
+    {
+      "id": "0c99464232d1",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div:nth-child(7) > section > div > div.b-flipCards__loadMoreButtonWrapper",
+      "bounds": {
+        "x": 70,
+        "y": 5731,
+        "width": 1300,
+        "height": 60
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "button"
+      },
+      "description": "b-flipcards-loadmorebuttonwrapper",
+      "features": {
+        "skeleton": "button",
+        "variant": "button",
+        "variantClean": "button"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "bc46cc5cb30d",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 5861,
+        "width": 1440,
+        "height": 344
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "image + heading + text + link"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "~@(T)",
+        "variant": "~@(Tkw)",
+        "variantClean": "~@(Tk)"
+      },
+      "screenshot": "blocks/bc46cc5cb30d.jpg"
+    },
+    {
+      "id": "eb4195d8e6ba",
+      "type": "default-content",
+      "selector": "#\\39 494 > div.m-componentBackground.-solidMask",
+      "bounds": {
+        "x": 0,
+        "y": 6205,
+        "width": 1440,
+        "height": 362
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "image"
+      },
+      "description": "m-componentbackground",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "fa33743e04b6",
+      "type": "default-content",
+      "selector": "#\\39 494 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > div > h4 > div:nth-child(1)",
+      "bounds": {
+        "x": 64,
+        "y": 6290,
+        "width": 612,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tw]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "f335e62c9022",
+      "type": "default-content",
+      "selector": "#\\39 494 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > div > h4 > div:nth-child(2)",
+      "bounds": {
+        "x": 64,
+        "y": 6326,
+        "width": 612,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "9cd7c0b03809",
+      "type": "default-content",
+      "selector": "#\\39 494 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > p",
+      "bounds": {
+        "x": 64,
+        "y": 6362,
+        "width": 644,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "text"
+      },
+      "description": "a-moustache",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "84a10d712ae4",
+      "type": "unknown",
+      "selector": "#\\39 494 > div.b-newsletterSubscription__container > div:nth-child(1) > div.b-newsletterSubscription__form",
+      "bounds": {
+        "x": 64,
+        "y": 6422,
+        "width": 420,
+        "height": 60
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "field + text + button"
+      },
+      "description": "b-newslettersubscription-form",
+      "features": {
+        "skeleton": "form",
+        "variant": "form",
+        "variantClean": "form"
+      },
+      "screenshot": "blocks/84a10d712ae4.jpg"
+    }
+  ]
+}

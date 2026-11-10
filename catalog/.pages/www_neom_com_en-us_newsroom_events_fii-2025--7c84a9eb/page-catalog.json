@@ -1,0 +1,407 @@
+{
+  "url": "https://www.neom.com/en-us/newsroom/events/fii-2025",
+  "title": "FII 2025",
+  "timestamp": "2026-11-06T14:15:05.597Z",
+  "duration": "12.7s",
+  "cleanup": {
+    "elementsRemoved": 23,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "s(sB(sB(s,sB),s(s,2x1),s(s,s),s(s,s(2x1,2x1)),2x1,sB),s)",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "#app-content",
+      "rc1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c1c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide > div.a-video",
+      "rc1c1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container > div.b-heroSliderV2__items > div.b-heroSliderV2__slide > div.b-heroSliderV2__copy.-bottom.-start.-gradient",
+      "rc1c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)",
+      "rc1c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2) > section.b-contentGroup.-isInitialised > div.m-componentBackground",
+      "rc1c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2) > section.b-contentGroup.-isInitialised > ul.b-contentGroup__items",
+      "rc1c3": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c3c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.-isInitialised > div.o-contentGrid.-single.-small > div.o-contentGrid__container > div.o-contentGrid__item.-paragraph.-extremeStart.-middle > div.m-paragraph > div.m-paragraph__heading",
+      "rc1c3c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section.b-content.-assetLast.-isInitialised > div.o-contentGrid.-single.-small > div.o-contentGrid__container > div.o-contentGrid__item.-paragraph.-extremeStart.-middle > div.m-paragraph > p.a-moustache.-large",
+      "rc1c4": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+      "rc1c4c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-contentGroup.-isInitialised > div.m-componentBackground",
+      "rc1c4c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-contentGroup.-isInitialised > ul.b-contentGroup__items",
+      "rc1c4c2c1": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-contentGroup.-isInitialised > ul.b-contentGroup__items > li.b-contentGroup__item:nth-of-type(1)",
+      "rc1c4c2c2": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > section.b-contentGroup.-isInitialised > ul.b-contentGroup__items > li.b-contentGroup__item:nth-of-type(2)",
+      "rc1c5": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c113-simple-card-carousel.aem-GridColumn.aem-GridColumn--default--12",
+      "rc1c6": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2": "#app > div.app__root.t-neom.-isReady > div.m-cursor"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12 > section.b-heroSliderV2.-hasBackgroundImage.t-darkMono.-disableFullScreen.-isInitialised > div.b-heroSliderV2__container"
+      },
+      {
+        "id": "rc2",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c09-content-group.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc5",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c113-simple-card-carousel.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": false,
+        "hint": "block",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "default-content",
+        "background": "#1d1f22",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#app-content > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.cmp.cmp-c96-newsletter-subscription.t-dark.aem-GridColumn.aem-GridColumn--default--12 > section.b-newsletterSubscription.-start.t-dark.-isInitialised"
+      },
+      {
+        "id": "rc7",
+        "selector": "#app > div.app__root.t-neom.-isReady > div.m-cursor",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#f9f7f2",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 0,
+      "height": 3301.765625
+    },
+    "splits": [],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "0a85914c6e9b",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c12-hero-slider.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 740
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "video + heading"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "{video ~(T)}",
+        "variant": "{video ~k(Tw)}",
+        "variantClean": "{video ~k(Tw)}"
+      },
+      "screenshot": "blocks/0a85914c6e9b.jpg"
+    },
+    {
+      "id": "7ef5c33eaa94",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div:nth-child(2)",
+      "bounds": {
+        "x": 0,
+        "y": 740,
+        "width": 1440,
+        "height": 532
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "list + text + heading + image"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T|T*1.5]",
+        "variant": "[Tko|T*1.5]",
+        "variantClean": "[Tk|T*1.5]"
+      },
+      "screenshot": "blocks/7ef5c33eaa94.jpg"
+    },
+    {
+      "id": "b1273aad5bca",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > div",
+      "bounds": {
+        "x": 70,
+        "y": 1342,
+        "width": 1300,
+        "height": 53
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "m-paragraph-heading",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tko",
+        "variantClean": "Tw"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "d4152013d6a0",
+      "type": "default-content",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c24-content.aem-GridColumn.aem-GridColumn--default--12 > section > div > div > div > div > p",
+      "bounds": {
+        "x": 70,
+        "y": 1415,
+        "width": 1300,
+        "height": 28
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "a-moustache",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "557dba5624a6",
+      "type": "unknown",
+      "selector": "#app-content > div > div > div > div > div:nth-child(4)",
+      "bounds": {
+        "x": 0,
+        "y": 1484,
+        "width": 1440,
+        "height": 776
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "list + text + heading + link + image"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tkow|T]",
+        "variantClean": "[Tk|T]"
+      },
+      "screenshot": "blocks/557dba5624a6.jpg"
+    },
+    {
+      "id": "c440bee0e2d8",
+      "type": "columns",
+      "selector": "#app-content > div > div > div > div > div.cmp.cmp-c113-simple-card-carousel.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 2260,
+        "width": 1440,
+        "height": 564
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "button + heading + text + image"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "([button] [T])",
+        "variant": "([button] [Tko|T])",
+        "variantClean": "([button] [Tk|T])"
+      },
+      "screenshot": "blocks/c440bee0e2d8.jpg"
+    },
+    {
+      "id": "1ea64cdfd7e4",
+      "type": "default-content",
+      "selector": "#\\31 389 > div.m-componentBackground.-solidMask",
+      "bounds": {
+        "x": 0,
+        "y": 2824,
+        "width": 1440,
+        "height": 478
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "large",
+        "hasGrid": false,
+        "structure": "image"
+      },
+      "description": "m-componentbackground",
+      "features": {
+        "skeleton": "T",
+        "variant": "T",
+        "variantClean": "T"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "58470b8e321c",
+      "type": "default-content",
+      "selector": "#\\31 389 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > div > h4 > div:nth-child(1)",
+      "bounds": {
+        "x": 64,
+        "y": 2949,
+        "width": 644,
+        "height": 72
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tw]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "532b189e1383",
+      "type": "default-content",
+      "selector": "#\\31 389 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > div > h4 > div:nth-child(2)",
+      "bounds": {
+        "x": 64,
+        "y": 3021,
+        "width": 644,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": ""
+      },
+      "description": "",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "628822abfc60",
+      "type": "default-content",
+      "selector": "#\\31 389 > div.b-newsletterSubscription__container > div:nth-child(1) > div.m-componentHeader.-start > div > p",
+      "bounds": {
+        "x": 64,
+        "y": 3057,
+        "width": 644,
+        "height": 36
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "text"
+      },
+      "description": "a-moustache",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "a3534e3577ba",
+      "type": "unknown",
+      "selector": "#\\31 389 > div.b-newsletterSubscription__container > div:nth-child(1) > div.b-newsletterSubscription__form",
+      "bounds": {
+        "x": 64,
+        "y": 3117,
+        "width": 420,
+        "height": 60
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "field + text + button"
+      },
+      "description": "b-newslettersubscription-form",
+      "features": {
+        "skeleton": "form",
+        "variant": "form",
+        "variantClean": "form"
+      },
+      "screenshot": "blocks/a3534e3577ba.jpg"
+    }
+  ]
+}
